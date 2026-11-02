@@ -19,6 +19,8 @@ async def lifespan(app):
 
 app = FastAPI(title='LoL Championship Manager',version='0.3.0',lifespan=lifespan)
 app.include_router(router)
+from .intelligence import router as intelligence_router
+app.include_router(intelligence_router)
 
 @app.exception_handler(DatabaseUnavailable)
 async def database_error(request,exc):
