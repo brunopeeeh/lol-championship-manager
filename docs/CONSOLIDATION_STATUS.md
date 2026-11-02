@@ -1,6 +1,22 @@
 # Estado da consolidação — 02/11/2026
 
-Etapas 1, 3, 4 e 6 do plano executadas; a etapa 5 foi ampliada com cobertura parcial explicitamente declarada. A integração das PRs na `main` aguarda autorização explícita, conforme o item 2.3 do [plano](EXECUTION_PLAN.md). Não foi iniciado simulador.
+Etapas 1, 2, 3, 4 e 6 do plano executadas; a etapa 5 foi ampliada com cobertura parcial explicitamente declarada. Após autorização explícita do usuário em 02/11/2026, as PRs #1–#5 foram integradas na `main`, conforme o item 2.3 do [plano](EXECUTION_PLAN.md). Não foi iniciado simulador.
+
+## Integração na main
+
+Merges realizados na ordem, preservando os commits revisados. Após cada integração, a PR seguinte foi redirecionada para `main` e sua integrabilidade conferida. As cinco PRs estão fechadas como integradas, sem conflitos e sem alterações nos heads aprovados.
+
+| PR | Commit de merge |
+| --- | --- |
+| [#1](https://github.com/brunopeeeh/lol-championship-manager/pull/1) | `5edff80f598748aa20335c6c42e96bf9ae42458b` |
+| [#2](https://github.com/brunopeeeh/lol-championship-manager/pull/2) | `e140a953539483d22f6ec88acf37c1085a38ac58` |
+| [#3](https://github.com/brunopeeeh/lol-championship-manager/pull/3) | `715ccbee90b1f00aa0b0de8308bd5f10947c3c08` |
+| [#4](https://github.com/brunopeeeh/lol-championship-manager/pull/4) | `ef6083a0d455ae98c328d560734c33c1d380e893` |
+| [#5](https://github.com/brunopeeeh/lol-championship-manager/pull/5) | `23631262c64b381828737724d2f4d1af09bc850d` |
+
+A árvore após o quinto merge é `0d02e91b41ca55b1d06e179d6b548abbb5ed1176`, idêntica à árvore da consolidação validada em `f87b4d55777e090eb72d923109d1dedcc667d653`. O comando `git diff --exit-code origin/codex/v04-consolidation origin/main` retornou sem diferenças. Por não haver mudança de código, não foi necessário repetir os 40 testes Python, 8 frontend e build já aprovados nessa árvore. A atualização posterior deste relatório modifica apenas documentação.
+
+Não havia revisões pendentes, threads de revisão, status checks ou execuções de GitHub Actions nos heads aprovados na conferência anterior aos merges. Isso não equivale a aprovação por CI ou revisão automática.
 
 ## Dados ativos
 
@@ -37,7 +53,6 @@ Para reverter o staging, pare o backend e restaure a cópia identificada do SQLi
 
 ## Pendências declaradas
 
-- Merge das PRs #1–#5, após autorização; conferir bases na ordem e a árvore final da `main` após integrar.
 - Curadoria cobre oito equipes em três referências e nove movimentações, não toda substituição, reserva, empréstimo ou contrato de novembro.
 - 439 observações antigas divergentes, 482 chaves anteriores ao corte e duas colisões antigas seguem em revisão; não foram sobrescritas.
 - 2.150 novas observações parciais da LPL; 669 observações novas sem ID do fornecedor usam fallback por nome. Outros possíveis aliases globais continuam sujeitos à revisão, sem fusão por semelhança.
