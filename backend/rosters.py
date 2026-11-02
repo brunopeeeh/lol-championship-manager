@@ -56,7 +56,7 @@ def compile_catalog(review, identities):
                 resolve(person)
     for event in result['events']:
         date.fromisoformat(event['reported_date'])
-        if event['kind'] not in {'departure_reported'}:
+        if event['kind'] not in {'departure_reported','join_reported','loan_reported','retirement_reported','bench_reported'}:
             raise ValueError('Unknown roster event')
         resolve(event)
     return result
