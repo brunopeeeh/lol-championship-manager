@@ -9,6 +9,7 @@ from .settings import storage
 from .supabase_client import request, select, DatabaseUnavailable
 from .portraits import load_catalog,portrait_for
 from .rosters import load_catalog as load_rosters, context_for
+from .identities import load_aliases
 
 router=APIRouter(prefix='/api/v3')
 SUMMARY=('id','player_id','name','team','team_id','region','season','split','position','overall','potential','confidence','games','date_to')
@@ -87,7 +88,7 @@ def dashboard():
         return {**model['config']['report'],'storage':'supabase','model':model['version']}
     rows=local_rows()
     with db.connect() as c:
-        counts={k:c.execute(f'SELECT count(*) FROM {t}').fetchone()[0] for k,t in [('players','identities_v3'),('matches','games_v3')]}
+        counts={'players':len({r['player_id'] for r in rows}),'matches':c.execute('SELECT count(*) FROM games_v3').fetchone()[0]}
         counts['teams']=c.execute('SELECT count(DISTINCT team_id) FROM observations_v3').fetchone()[0]
     return {**counts,'storage':'sqlite','ratings':len(rows),'global_overalls':sum(r['overall'] is not None for r in rows),
             'regions':sorted({r['region'] for r in rows}),'data_through':max((r['date_to'] for r in rows),default=None),
@@ -103,13 +104,16 @@ def detail(rating_id:str):
             uuid.UUID(rating_id)
         except ValueError:
             raise HTTPException(404,'Ficha não encontrada')
-        records=select('player_ratings',{'id':'eq.'+rating_id,'select':'id,player_id,overall,provenance'})
+        approved=select('rating_models',{'select':'id','config->>import_complete':'eq.true','limit':200})
+        if not approved:raise HTTPException(404,'Ficha não encontrada')
+        model_filter='in.('+','.join(m['id'] for m in approved)+')'
+        records=select('player_ratings',{'id':'eq.'+rating_id,'model_id':model_filter,'select':'id,player_id,overall,provenance'})
         if not records: raise HTTPException(404,'Ficha não encontrada')
         r=decode_remote(records[0])
         r['portrait']=portrait_for(r['player_id'])
         r['roster_context']=context_for(r['player_id'])
         histories=select('player_ratings',{'player_id':'eq.'+r['player_id'],'select':'id,season,position,overall,confidence,evaluated_at,model_id',
-                                        'order':'season.asc,evaluated_at.asc','limit':200})
+                                        'model_id':model_filter,'order':'season.asc,evaluated_at.asc','limit':200})
         r['rating_history']=histories
         career=select('rosters',{'player_id':'eq.'+r['player_id'],
               'start_date':'lte.'+str(r['season'])+'-12-31','select':'start_date,end_date,teams(name)',
@@ -123,12 +127,14 @@ def detail(rating_id:str):
         r['portrait']=portrait_for(r['player_id'])
         r['roster_context']=context_for(r['player_id'])
         r['rating_history']=[{k:h.get(k) for k in ('season','position','overall','confidence','method')} for h in local_rows() if h['player_id']==r['player_id']]
-        r['career']=[dict(x) for x in c.execute('''SELECT o.team,MIN(g.date) AS "from",MAX(g.date) AS "to"
-            FROM observations_v3 o JOIN games_v3 g ON g.id=o.game_id WHERE o.player_id=? AND g.season<=?
-            GROUP BY g.season,o.team ORDER BY MIN(g.date)''',(r['player_id'],r['season']))]
-        r['sources']=[dict(x) for x in c.execute('''SELECT DISTINCT s.url,s.filename,s.sha256,s.retrieved_at,s.license
+        members=[r['player_id'],*[key for key,value in load_aliases().items() if value['canonical_id']==r['player_id']]]
+        placeholders=','.join('?' for _ in members)
+        r['career']=[dict(x) for x in c.execute(f'''SELECT o.team,MIN(g.date) AS "from",MAX(g.date) AS "to"
+            FROM observations_v3 o JOIN games_v3 g ON g.id=o.game_id WHERE o.player_id IN ({placeholders}) AND g.season<=?
+            GROUP BY g.season,o.team ORDER BY MIN(g.date)''',(*members,r['season']))]
+        r['sources']=[dict(x) for x in c.execute(f'''SELECT DISTINCT s.url,s.filename,s.sha256,s.retrieved_at,s.license
           FROM sources_v3 s JOIN evidence_v3 e ON e.source_id=s.id JOIN games_v3 g ON g.id=e.game_id
-          WHERE e.player_id=? AND g.season<=?''',(r['player_id'],r['season']))]
+          WHERE e.player_id IN ({placeholders}) AND g.season<=?''',(*members,r['season']))]
         if 'champion_pool' not in r:
             r['champion_pool']=[dict(x) for x in c.execute('''SELECT o.champion, count(*) games,
               SUM(o.result) wins FROM observations_v3 o JOIN games_v3 g ON g.id=o.game_id
@@ -172,7 +178,7 @@ def roster_snapshots():
             teams.append({**team,'players':players})
         snapshots.append({**snapshot,'teams':teams})
     return {**data,'snapshots':snapshots,'current_rosters_verified':False,
-            'warning':'Elencos com data de referência. Contratos atuais não verificados; estatísticas e ratings continuam no corte de abril de 2026.'}
+            'warning':'Elencos com data de referência. Contratos atuais não verificados; o corte estatístico depende da liga e aparece em Qualidade.'}
 
 @router.get('/me')
 def me(authorization:str|None=Header(None)):

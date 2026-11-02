@@ -1,6 +1,6 @@
 {
-  "reviewed_at": "2026-11-01",
-  "scope": "CBLOL; announced opening roster, not complete November contracts",
+  "reviewed_at": "2026-11-02",
+  "scope": "CBLOL 2026: observed Cup lineups, opening announcements for Splits 1/2 and dated editorial events; not current contracts",
   "sources": {
     "july": {
       "url": "https://maisesports.com.br/cblol-2026-veja-o-que-mudou-nas-escalacoes-dos-times-para-o-2-split",
@@ -25,9 +25,969 @@
       "retrieved_at": "2026-11-01",
       "type": "secondary_roster_tracker",
       "license": "no open redistribution license confirmed"
+    },
+    "march": {
+      "url": "https://maisesports.com.br/cblol-2026-red-confirma-zynts-como-titular-veja-todas-as-line-ups",
+      "provider": "Mais Esports",
+      "published_at": "2026-03-27",
+      "retrieved_at": "2026-11-02",
+      "type": "editorial_report",
+      "license": "reuse license unconfirmed"
+    },
+    "namiru": {
+      "url": "https://www.pichauarena.com.br/lol/pain-gaming-mudanca-cblol/",
+      "provider": "Pichau Arena",
+      "published_at": "2026-08-28",
+      "retrieved_at": "2026-11-02",
+      "type": "editorial_report",
+      "license": "reuse license unconfirmed"
+    },
+    "manel": {
+      "url": "https://www.sheepesports.com/pt/articles/it-s-my-time-manel-talks-about-his-cblol-debut-and-fast-growth-at-red/pt",
+      "provider": "Sheep Esports (entrevista)",
+      "published_at": "2026-08-09",
+      "retrieved_at": "2026-11-02",
+      "type": "editorial_report",
+      "license": "reuse license unconfirmed"
+    },
+    "frosty": {
+      "url": "https://hubinsider.substack.com/p/cblol-2026-entenda-a-saida-do-frosty",
+      "provider": "HUB Insider",
+      "published_at": "2026-07-29",
+      "retrieved_at": "2026-11-02",
+      "type": "editorial_report",
+      "license": "reuse license unconfirmed"
+    },
+    "cup_csv": {
+      "url": "https://raw.githubusercontent.com/twodotone/finalLOL/192a8783278f7d1fb6e688d5525b702b8bbe6ec1/data/csv/2026_LoL_esports_match_data_from_OraclesElixir.csv",
+      "provider": "Oracle’s Elixir via finalLOL",
+      "published_at": null,
+      "retrieved_at": "2026-11-02",
+      "type": "match_observation",
+      "license": "reuse license unconfirmed"
     }
   },
   "snapshots": [
+    {
+      "id": "cblol-2026-cup-first-observed",
+      "region": "CBLOL",
+      "season": 2026,
+      "competition": "Copa CBLOL 2026",
+      "reference_date": "2026-01-17",
+      "status": "observed_lineups",
+      "note": "Escalação da primeira partida observada de cada time na Copa. Não é anúncio de contratos; data e partida individuais preservadas.",
+      "teams": [
+        {
+          "name": "FURIA",
+          "observed_at": "2026-01-17 18:27:20",
+          "game_id": "LOLTMNT03_337829",
+          "players": [
+            {
+              "name": "Guigo",
+              "position": "top",
+              "source_ids": [
+                "cup_csv"
+              ],
+              "player_id": "597d880f-f257-514a-bbd1-aa8f7524469a",
+              "external_player_id": "oe:player:d61d8a0b25028f787123bfff542d305",
+              "identity_status": "exact_unique_handle"
+            },
+            {
+              "name": "Tatu",
+              "position": "jungle",
+              "source_ids": [
+                "cup_csv"
+              ],
+              "player_id": "6c61b518-f586-5ffa-bef3-d1a3f7f7657b",
+              "external_player_id": "oe:player:6625d682ed10ef5e0e7c6c9e4dd2fc1",
+              "identity_status": "exact_unique_handle"
+            },
+            {
+              "name": "Tutsz",
+              "position": "mid",
+              "source_ids": [
+                "cup_csv"
+              ],
+              "player_id": "197299cd-f124-5fec-bac3-59ecb144ab4b",
+              "external_player_id": "oe:player:886e8205ac1b091dbf67dbae83b1544",
+              "identity_status": "exact_unique_handle"
+            },
+            {
+              "name": "Ayu",
+              "position": "adc",
+              "source_ids": [
+                "cup_csv"
+              ],
+              "player_id": "b2c1f171-3f9a-5ab8-a484-24f750e5e180",
+              "external_player_id": "oe:player:d7a904873d10637ef44afa9c1de83b3",
+              "identity_status": "exact_unique_handle"
+            },
+            {
+              "name": "JoJo",
+              "position": "support",
+              "source_ids": [
+                "cup_csv"
+              ],
+              "player_id": "e74a1e06-e1fc-5492-9e2b-ae2acc809692",
+              "external_player_id": "oe:player:cb4cd2fd258d5961d2f1c4815b04123",
+              "identity_status": "exact_unique_handle"
+            }
+          ]
+        },
+        {
+          "name": "Fluxo W7M",
+          "observed_at": "2026-01-17 17:20:13",
+          "game_id": "LOLTMNT03_336773",
+          "players": [
+            {
+              "name": "curty",
+              "position": "top",
+              "source_ids": [
+                "cup_csv"
+              ],
+              "player_id": "0ce7047b-d50f-528c-97d4-af4a56bb8307",
+              "external_player_id": "oe:player:c2247726b5c15c6b06022f64d4a080a",
+              "identity_status": "exact_unique_handle"
+            },
+            {
+              "name": "Peach",
+              "position": "jungle",
+              "source_ids": [
+                "cup_csv"
+              ],
+              "player_id": "8b2c51fe-b730-5ad8-b67f-c90b9ed771a2",
+              "external_player_id": "oe:player:53841c6e42a6ce77b6f3b80133c9342",
+              "identity_status": "exact_unique_handle"
+            },
+            {
+              "name": "Hauz",
+              "position": "mid",
+              "source_ids": [
+                "cup_csv"
+              ],
+              "player_id": "fc31c637-0d0a-5344-8265-c7f8463fedb0",
+              "external_player_id": "oe:player:979d7cbbe1e2a8b55d503047f5c72a0",
+              "identity_status": "exact_unique_handle"
+            },
+            {
+              "name": "BAO",
+              "position": "adc",
+              "source_ids": [
+                "cup_csv"
+              ],
+              "player_id": "0b3abafe-ff73-5d2c-80ca-76d934c8b68b",
+              "external_player_id": "oe:player:6c1d0c529e73fe4c8b9a5306867c4bf",
+              "identity_status": "exact_unique_handle"
+            },
+            {
+              "name": "ProDelta",
+              "position": "support",
+              "source_ids": [
+                "cup_csv"
+              ],
+              "player_id": "28fd1240-f2c3-50e4-b857-55476f66526a",
+              "external_player_id": "oe:player:44744b6de7f1fa0b93d0e9b7ea328fc",
+              "identity_status": "exact_unique_handle"
+            }
+          ]
+        },
+        {
+          "name": "LOUD",
+          "observed_at": "2026-01-17 18:27:20",
+          "game_id": "LOLTMNT03_337829",
+          "players": [
+            {
+              "name": "xyno",
+              "position": "top",
+              "source_ids": [
+                "cup_csv"
+              ],
+              "player_id": "58582fe6-6e61-596e-b724-9fd542b56f0f",
+              "external_player_id": "oe:player:fd0a05e90aefc83ac69d3352b0f0be6",
+              "identity_status": "exact_unique_handle"
+            },
+            {
+              "name": "YoungJae",
+              "position": "jungle",
+              "source_ids": [
+                "cup_csv"
+              ],
+              "player_id": "de6e7aca-e06d-5adf-b3ef-d1233ec1c28a",
+              "external_player_id": "oe:player:e5feef89d633a666eeaaf6392ca2fa9",
+              "identity_status": "exact_unique_handle"
+            },
+            {
+              "name": "Mago",
+              "position": "mid",
+              "source_ids": [
+                "cup_csv"
+              ],
+              "player_id": "5fb81be5-7069-5b81-a06b-ecbe994e0d5a",
+              "external_player_id": "oe:player:a5a0a92da1f12d481f7e1699e638000",
+              "identity_status": "exact_unique_handle"
+            },
+            {
+              "name": "Bull",
+              "position": "adc",
+              "source_ids": [
+                "cup_csv"
+              ],
+              "player_id": "f59afbeb-424c-5710-8a0b-4fc45954101b",
+              "external_player_id": "oe:player:92c21511d7b383b2f8ba5b00c3c9a47",
+              "identity_status": "exact_unique_handle"
+            },
+            {
+              "name": "RedBert",
+              "position": "support",
+              "source_ids": [
+                "cup_csv"
+              ],
+              "player_id": "cf71a12e-40c6-5a42-b45c-839c7e8b68a9",
+              "external_player_id": "oe:player:0c041d02ab7138f57164fafbc091b2d",
+              "identity_status": "exact_unique_handle"
+            }
+          ]
+        },
+        {
+          "name": "LEVIATÁN",
+          "observed_at": "2026-01-17 20:16:54",
+          "game_id": "LOLTMNT03_337847",
+          "players": [
+            {
+              "name": "Devost",
+              "position": "top",
+              "source_ids": [
+                "cup_csv"
+              ],
+              "player_id": "d3cb2e45-be6c-55c6-926c-bf805ce20a38",
+              "external_player_id": "oe:player:fd108dd07ee510bb9462127d183e1c5",
+              "identity_status": "exact_unique_handle"
+            },
+            {
+              "name": "Booki",
+              "position": "jungle",
+              "source_ids": [
+                "cup_csv"
+              ],
+              "player_id": "da52e2a0-1f0f-5281-ba58-1717088a0c09",
+              "external_player_id": "oe:player:bc5b7cd82bc9e26b3bbdeddeb73c7d8",
+              "identity_status": "exact_unique_handle"
+            },
+            {
+              "name": "Enga",
+              "position": "mid",
+              "source_ids": [
+                "cup_csv"
+              ],
+              "player_id": "cf54d317-0298-53f2-9061-8050bfa1237a",
+              "external_player_id": "oe:player:39d68aa20f0b0b1ddddb871a7b26fbf",
+              "identity_status": "exact_unique_handle"
+            },
+            {
+              "name": "ceo",
+              "position": "adc",
+              "source_ids": [
+                "cup_csv"
+              ],
+              "player_id": "0b536dfe-430e-575b-aed8-b30dcdf7193d",
+              "external_player_id": "oe:player:219d2d945cfbd391d0ade5e352a1bc5",
+              "identity_status": "exact_unique_handle"
+            },
+            {
+              "name": "TopLop",
+              "position": "support",
+              "source_ids": [
+                "cup_csv"
+              ],
+              "player_id": "a4ceb459-ae9e-5a8c-8118-42f01ddb0d02",
+              "external_player_id": "oe:player:9d8b079deedcc90dda4617fb4ffac40",
+              "identity_status": "exact_unique_handle"
+            }
+          ]
+        },
+        {
+          "name": "LØS",
+          "observed_at": "2026-01-17 19:25:07",
+          "game_id": "LOLTMNT03_337841",
+          "players": [
+            {
+              "name": "Zest",
+              "position": "top",
+              "source_ids": [
+                "cup_csv"
+              ],
+              "player_id": "688aabf0-cb2f-5aba-ad93-51e21e68e236",
+              "external_player_id": "oe:player:786b5bbf7bbfb7b79379e8589a865c1",
+              "identity_status": "exact_unique_handle"
+            },
+            {
+              "name": "Drakehero",
+              "position": "jungle",
+              "source_ids": [
+                "cup_csv"
+              ],
+              "player_id": "39c2f34b-448c-51c2-88eb-3eaa544db4ef",
+              "external_player_id": "oe:player:5ee2cd6074f5a5f37edebee2f481c6b",
+              "identity_status": "exact_unique_handle"
+            },
+            {
+              "name": "Feisty",
+              "position": "mid",
+              "source_ids": [
+                "cup_csv"
+              ],
+              "player_id": "39c4cd53-9885-516c-85b8-193a3ce3e539",
+              "external_player_id": "oe:player:d1ae0e2f9f3ac1e0e0cdcb86504ca77",
+              "identity_status": "exact_unique_handle"
+            },
+            {
+              "name": "Duduhh",
+              "position": "adc",
+              "source_ids": [
+                "cup_csv"
+              ],
+              "player_id": "8bbd36ca-7c98-5f4d-98ea-a155a2fdc2b7",
+              "external_player_id": "oe:player:b4179fdeda1242fcd94b82a5710dd3e",
+              "identity_status": "exact_unique_handle"
+            },
+            {
+              "name": "Ackerman",
+              "position": "support",
+              "source_ids": [
+                "cup_csv"
+              ],
+              "player_id": "3dcf6368-6b2d-57fd-9636-c8a5f6fcaa9a",
+              "external_player_id": "oe:player:145201414ecb853de684fbe7d6bb5b6",
+              "identity_status": "exact_unique_handle"
+            }
+          ]
+        },
+        {
+          "name": "RED Canids",
+          "observed_at": "2026-01-17 17:20:13",
+          "game_id": "LOLTMNT03_336773",
+          "players": [
+            {
+              "name": "fNb",
+              "position": "top",
+              "source_ids": [
+                "cup_csv"
+              ],
+              "player_id": "55fb5d03-76ac-5a00-b56f-bca8c7aabedc",
+              "external_player_id": "oe:player:61ea9de879a9b27bb8eddcba7f32f4a",
+              "identity_status": "exact_unique_handle"
+            },
+            {
+              "name": "Curse",
+              "position": "jungle",
+              "source_ids": [
+                "cup_csv"
+              ],
+              "player_id": "db644e98-5cb7-570e-b933-0faf94d3dfda",
+              "external_player_id": "oe:player:9c51ed760409db6fa2a02fe8046f110",
+              "identity_status": "exact_unique_handle"
+            },
+            {
+              "name": "Kaze",
+              "position": "mid",
+              "source_ids": [
+                "cup_csv"
+              ],
+              "player_id": "f4e9312c-7468-5ede-8daa-919f4f4337b8",
+              "external_player_id": "oe:player:722c8846b5f0c756efb2affe467958a",
+              "identity_status": "exact_unique_handle"
+            },
+            {
+              "name": "Rabelo",
+              "position": "adc",
+              "source_ids": [
+                "cup_csv"
+              ],
+              "player_id": "0d681ab0-326f-51b6-b6ba-e8b40f3cad0a",
+              "external_player_id": "oe:player:3ace2e5d36ad46eb2aec2ad1c43d3c5",
+              "identity_status": "exact_unique_handle"
+            },
+            {
+              "name": "frosty",
+              "position": "support",
+              "source_ids": [
+                "cup_csv"
+              ],
+              "player_id": "ae4de9ae-541e-572e-99d8-4533ce25ed10",
+              "external_player_id": "oe:player:9d361f9d8214252ee571375f9105cb4",
+              "identity_status": "exact_unique_handle"
+            }
+          ]
+        },
+        {
+          "name": "Vivo Keyd Stars",
+          "observed_at": "2026-01-17 16:19:20",
+          "game_id": "LOLTMNT03_337813",
+          "players": [
+            {
+              "name": "Boal",
+              "position": "top",
+              "source_ids": [
+                "cup_csv"
+              ],
+              "player_id": "528c1a04-d6dc-5d8a-83b0-5d767c26b377",
+              "external_player_id": "oe:player:6daafc30b010acda4ebc20b6785cbc0",
+              "identity_status": "exact_unique_handle"
+            },
+            {
+              "name": "Disamis",
+              "position": "jungle",
+              "source_ids": [
+                "cup_csv"
+              ],
+              "player_id": "781df45a-756e-56ff-8f50-70fa0f7dd072",
+              "external_player_id": "oe:player:946b74bfc34e861b344ae03700af039",
+              "identity_status": "exact_unique_handle"
+            },
+            {
+              "name": "Mireu",
+              "position": "mid",
+              "source_ids": [
+                "cup_csv"
+              ],
+              "player_id": "3523bc9e-2702-57f6-a5dd-5a2580e14b30",
+              "external_player_id": "oe:player:5b86bafc34d79c84a8847d29b64ca29",
+              "identity_status": "exact_unique_handle"
+            },
+            {
+              "name": "Morttheus",
+              "position": "adc",
+              "source_ids": [
+                "cup_csv"
+              ],
+              "player_id": "9b7b972b-96ea-5192-8bbe-54d3734946b5",
+              "external_player_id": "oe:player:1999dbe32608051613a2d3ed9c1b0d4",
+              "identity_status": "exact_unique_handle"
+            },
+            {
+              "name": "Kaiwing",
+              "position": "support",
+              "source_ids": [
+                "cup_csv"
+              ],
+              "player_id": "c7feca0f-9127-53a6-a3a7-b865150704a1",
+              "external_player_id": "oe:player:0103d21d116b61eb55fa351242208cf",
+              "identity_status": "exact_unique_handle"
+            }
+          ]
+        },
+        {
+          "name": "paiN Gaming",
+          "observed_at": "2026-01-17 16:19:20",
+          "game_id": "LOLTMNT03_337813",
+          "players": [
+            {
+              "name": "Robo",
+              "position": "top",
+              "source_ids": [
+                "cup_csv"
+              ],
+              "player_id": "45b7f240-58c2-5059-bc22-14dd62b4e2c6",
+              "external_player_id": "oe:player:3085815ef497539cb1d93b3c9a16624",
+              "identity_status": "exact_unique_handle"
+            },
+            {
+              "name": "CarioK",
+              "position": "jungle",
+              "source_ids": [
+                "cup_csv"
+              ],
+              "player_id": "246ec4ef-bd82-5894-8217-739ad813b4c4",
+              "external_player_id": "oe:player:5e07433d52dbc7bbc4faaf9492dbd2c",
+              "identity_status": "exact_unique_handle"
+            },
+            {
+              "name": "tinowns",
+              "position": "mid",
+              "source_ids": [
+                "cup_csv"
+              ],
+              "player_id": "9c6f2368-780f-5a59-abad-ff97194a43e1",
+              "external_player_id": "oe:player:ae770d2c942cee6dbcfbd1832015231",
+              "identity_status": "exact_unique_handle"
+            },
+            {
+              "name": "Marvin",
+              "position": "adc",
+              "source_ids": [
+                "cup_csv"
+              ],
+              "player_id": "4cce7cd2-aa25-580f-b3d1-79501cf21e9f",
+              "external_player_id": "oe:player:7db16a4ce881aecec2bfeb3e0c74188",
+              "identity_status": "exact_unique_handle"
+            },
+            {
+              "name": "Kuri",
+              "position": "support",
+              "source_ids": [
+                "cup_csv"
+              ],
+              "player_id": "f1698ea2-1632-5fa0-802e-a46537fe9908",
+              "external_player_id": "oe:player:87b0ff8e56b0ce96bc0a82ea5dc9a7e",
+              "identity_status": "exact_unique_handle"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cblol-2026-split1-opening",
+      "region": "CBLOL",
+      "season": 2026,
+      "competition": "CBLOL 2026 Split 1",
+      "reference_date": "2026-03-27",
+      "status": "announced_opening_roster",
+      "note": "Quintetos anunciados para a abertura; reservas e substituições posteriores não são contratos atuais.",
+      "teams": [
+        {
+          "name": "Fluxo W7M",
+          "players": [
+            {
+              "name": "curty",
+              "position": "top",
+              "source_ids": [
+                "march"
+              ],
+              "player_id": "0ce7047b-d50f-528c-97d4-af4a56bb8307",
+              "external_player_id": "oe:player:c2247726b5c15c6b06022f64d4a080a",
+              "identity_status": "exact_unique_handle"
+            },
+            {
+              "name": "Peach",
+              "position": "jungle",
+              "source_ids": [
+                "march"
+              ],
+              "player_id": "8b2c51fe-b730-5ad8-b67f-c90b9ed771a2",
+              "external_player_id": "oe:player:53841c6e42a6ce77b6f3b80133c9342",
+              "identity_status": "exact_unique_handle"
+            },
+            {
+              "name": "cody",
+              "position": "mid",
+              "source_ids": [
+                "march"
+              ],
+              "player_id": "cbc05089-abb8-5da7-ad17-6d7fd8270061",
+              "external_player_id": "oe:player:a66db93c9f417a2500c24e689ba0ccc",
+              "identity_status": "exact_unique_handle"
+            },
+            {
+              "name": "BAO",
+              "position": "adc",
+              "source_ids": [
+                "march"
+              ],
+              "player_id": "0b3abafe-ff73-5d2c-80ca-76d934c8b68b",
+              "external_player_id": "oe:player:6c1d0c529e73fe4c8b9a5306867c4bf",
+              "identity_status": "exact_unique_handle"
+            },
+            {
+              "name": "Momochi",
+              "position": "support",
+              "source_ids": [
+                "march"
+              ],
+              "player_id": "e0494a61-8584-5f9f-be78-08ce31f85088",
+              "external_player_id": "oe:player:4dabc9746a3cae241a063d7a1e4d204",
+              "identity_status": "exact_unique_handle"
+            }
+          ]
+        },
+        {
+          "name": "FURIA",
+          "players": [
+            {
+              "name": "Guigo",
+              "position": "top",
+              "source_ids": [
+                "march"
+              ],
+              "player_id": "597d880f-f257-514a-bbd1-aa8f7524469a",
+              "external_player_id": "oe:player:d61d8a0b25028f787123bfff542d305",
+              "identity_status": "exact_unique_handle"
+            },
+            {
+              "name": "Tatu",
+              "position": "jungle",
+              "source_ids": [
+                "march"
+              ],
+              "player_id": "6c61b518-f586-5ffa-bef3-d1a3f7f7657b",
+              "external_player_id": "oe:player:6625d682ed10ef5e0e7c6c9e4dd2fc1",
+              "identity_status": "exact_unique_handle"
+            },
+            {
+              "name": "Tutsz",
+              "position": "mid",
+              "source_ids": [
+                "march"
+              ],
+              "player_id": "197299cd-f124-5fec-bac3-59ecb144ab4b",
+              "external_player_id": "oe:player:886e8205ac1b091dbf67dbae83b1544",
+              "identity_status": "exact_unique_handle"
+            },
+            {
+              "name": "Ayu",
+              "position": "adc",
+              "source_ids": [
+                "march"
+              ],
+              "player_id": "b2c1f171-3f9a-5ab8-a484-24f750e5e180",
+              "external_player_id": "oe:player:d7a904873d10637ef44afa9c1de83b3",
+              "identity_status": "exact_unique_handle"
+            },
+            {
+              "name": "JoJo",
+              "position": "support",
+              "source_ids": [
+                "march"
+              ],
+              "player_id": "e74a1e06-e1fc-5492-9e2b-ae2acc809692",
+              "external_player_id": "oe:player:cb4cd2fd258d5961d2f1c4815b04123",
+              "identity_status": "exact_unique_handle"
+            }
+          ]
+        },
+        {
+          "name": "LEVIATÁN",
+          "players": [
+            {
+              "name": "Devost",
+              "position": "top",
+              "source_ids": [
+                "march"
+              ],
+              "player_id": "d3cb2e45-be6c-55c6-926c-bf805ce20a38",
+              "external_player_id": "oe:player:fd108dd07ee510bb9462127d183e1c5",
+              "identity_status": "exact_unique_handle"
+            },
+            {
+              "name": "Booki",
+              "position": "jungle",
+              "source_ids": [
+                "march"
+              ],
+              "player_id": "da52e2a0-1f0f-5281-ba58-1717088a0c09",
+              "external_player_id": "oe:player:bc5b7cd82bc9e26b3bbdeddeb73c7d8",
+              "identity_status": "exact_unique_handle"
+            },
+            {
+              "name": "Enga",
+              "position": "mid",
+              "source_ids": [
+                "march"
+              ],
+              "player_id": "cf54d317-0298-53f2-9061-8050bfa1237a",
+              "external_player_id": "oe:player:39d68aa20f0b0b1ddddb871a7b26fbf",
+              "identity_status": "exact_unique_handle"
+            },
+            {
+              "name": "Snaker",
+              "position": "adc",
+              "source_ids": [
+                "march"
+              ],
+              "player_id": "3e6d483d-ecf3-58d1-a6cd-c97591e388c8",
+              "external_player_id": "oe:player:81d2110b25710f286ed9e9b6a8426b0",
+              "identity_status": "exact_unique_handle"
+            },
+            {
+              "name": "TopLop",
+              "position": "support",
+              "source_ids": [
+                "march"
+              ],
+              "player_id": "a4ceb459-ae9e-5a8c-8118-42f01ddb0d02",
+              "external_player_id": "oe:player:9d8b079deedcc90dda4617fb4ffac40",
+              "identity_status": "exact_unique_handle"
+            }
+          ]
+        },
+        {
+          "name": "LØS",
+          "players": [
+            {
+              "name": "Zest",
+              "position": "top",
+              "source_ids": [
+                "march"
+              ],
+              "player_id": "688aabf0-cb2f-5aba-ad93-51e21e68e236",
+              "external_player_id": "oe:player:786b5bbf7bbfb7b79379e8589a865c1",
+              "identity_status": "exact_unique_handle"
+            },
+            {
+              "name": "Drakehero",
+              "position": "jungle",
+              "source_ids": [
+                "march"
+              ],
+              "player_id": "39c2f34b-448c-51c2-88eb-3eaa544db4ef",
+              "external_player_id": "oe:player:5ee2cd6074f5a5f37edebee2f481c6b",
+              "identity_status": "exact_unique_handle"
+            },
+            {
+              "name": "Feisty",
+              "position": "mid",
+              "source_ids": [
+                "march"
+              ],
+              "player_id": "39c4cd53-9885-516c-85b8-193a3ce3e539",
+              "external_player_id": "oe:player:d1ae0e2f9f3ac1e0e0cdcb86504ca77",
+              "identity_status": "exact_unique_handle"
+            },
+            {
+              "name": "Duduhh",
+              "position": "adc",
+              "source_ids": [
+                "march"
+              ],
+              "player_id": "8bbd36ca-7c98-5f4d-98ea-a155a2fdc2b7",
+              "external_player_id": "oe:player:b4179fdeda1242fcd94b82a5710dd3e",
+              "identity_status": "exact_unique_handle"
+            },
+            {
+              "name": "Ackerman",
+              "position": "support",
+              "source_ids": [
+                "march"
+              ],
+              "player_id": "3dcf6368-6b2d-57fd-9636-c8a5f6fcaa9a",
+              "external_player_id": "oe:player:145201414ecb853de684fbe7d6bb5b6",
+              "identity_status": "exact_unique_handle"
+            }
+          ]
+        },
+        {
+          "name": "LOUD",
+          "players": [
+            {
+              "name": "xyno",
+              "position": "top",
+              "source_ids": [
+                "march"
+              ],
+              "player_id": "58582fe6-6e61-596e-b724-9fd542b56f0f",
+              "external_player_id": "oe:player:fd0a05e90aefc83ac69d3352b0f0be6",
+              "identity_status": "exact_unique_handle"
+            },
+            {
+              "name": "YoungJae",
+              "position": "jungle",
+              "source_ids": [
+                "march"
+              ],
+              "player_id": "de6e7aca-e06d-5adf-b3ef-d1233ec1c28a",
+              "external_player_id": "oe:player:e5feef89d633a666eeaaf6392ca2fa9",
+              "identity_status": "exact_unique_handle"
+            },
+            {
+              "name": "Envy",
+              "position": "mid",
+              "source_ids": [
+                "march"
+              ],
+              "reviewed_external_player_id": "oe:player:a672b5bc1c212a6922418fad18734c1",
+              "identity_review_note": "Provider ID observed for LOUD mid in the match CSV; do not merge the homonymous identity.",
+              "player_id": "914dc9ed-35fd-5b70-9014-f6d70835b96d",
+              "external_player_id": "oe:player:a672b5bc1c212a6922418fad18734c1",
+              "identity_status": "reviewed_external_id"
+            },
+            {
+              "name": "Bull",
+              "position": "adc",
+              "source_ids": [
+                "march"
+              ],
+              "player_id": "f59afbeb-424c-5710-8a0b-4fc45954101b",
+              "external_player_id": "oe:player:92c21511d7b383b2f8ba5b00c3c9a47",
+              "identity_status": "exact_unique_handle"
+            },
+            {
+              "name": "RedBert",
+              "position": "support",
+              "source_ids": [
+                "march"
+              ],
+              "player_id": "cf71a12e-40c6-5a42-b45c-839c7e8b68a9",
+              "external_player_id": "oe:player:0c041d02ab7138f57164fafbc091b2d",
+              "identity_status": "exact_unique_handle"
+            }
+          ]
+        },
+        {
+          "name": "paiN Gaming",
+          "players": [
+            {
+              "name": "Robo",
+              "position": "top",
+              "source_ids": [
+                "march"
+              ],
+              "player_id": "45b7f240-58c2-5059-bc22-14dd62b4e2c6",
+              "external_player_id": "oe:player:3085815ef497539cb1d93b3c9a16624",
+              "identity_status": "exact_unique_handle"
+            },
+            {
+              "name": "Samkz",
+              "position": "jungle",
+              "source_ids": [
+                "march"
+              ],
+              "player_id": "9ee77cc2-81ba-552b-8657-afe5bb13b750",
+              "external_player_id": "oe:player:44b1e81bfc6d5bb1a0da7fe5daaa4c0",
+              "identity_status": "exact_unique_handle"
+            },
+            {
+              "name": "Keine",
+              "position": "mid",
+              "source_ids": [
+                "march"
+              ],
+              "player_id": "53cb0afc-af12-5805-a455-bfd327db3397",
+              "external_player_id": "oe:player:1b26a8bba6e841f1c375b283db5c1c6",
+              "identity_status": "exact_unique_handle"
+            },
+            {
+              "name": "Trigger",
+              "position": "adc",
+              "source_ids": [
+                "march"
+              ],
+              "player_id": "43ebc1e5-582d-53d9-98aa-54c8fe6a3509",
+              "external_player_id": "oe:player:5bc99370722c5ecbfa9b3c1e17338e6",
+              "identity_status": "exact_unique_handle"
+            },
+            {
+              "name": "Kuri",
+              "position": "support",
+              "source_ids": [
+                "march"
+              ],
+              "player_id": "f1698ea2-1632-5fa0-802e-a46537fe9908",
+              "external_player_id": "oe:player:87b0ff8e56b0ce96bc0a82ea5dc9a7e",
+              "identity_status": "exact_unique_handle"
+            }
+          ]
+        },
+        {
+          "name": "RED Canids",
+          "players": [
+            {
+              "name": "zynts",
+              "position": "top",
+              "source_ids": [
+                "march"
+              ],
+              "player_id": "ea097c46-876c-5633-8510-770c10b619ff",
+              "external_player_id": "oe:player:978c38ad839a85b4bdc8d3cd5e2c560",
+              "identity_status": "exact_unique_handle"
+            },
+            {
+              "name": "STEPZ",
+              "position": "jungle",
+              "source_ids": [
+                "march"
+              ],
+              "player_id": "f52bfbee-80b3-525a-aa5b-3aaf3babf088",
+              "external_player_id": "oe:player:6fcbbff49badbddafbda79a49abba07",
+              "identity_status": "exact_unique_handle"
+            },
+            {
+              "name": "Kaze",
+              "position": "mid",
+              "source_ids": [
+                "march"
+              ],
+              "player_id": "f4e9312c-7468-5ede-8daa-919f4f4337b8",
+              "external_player_id": "oe:player:722c8846b5f0c756efb2affe467958a",
+              "identity_status": "exact_unique_handle"
+            },
+            {
+              "name": "Rabelo",
+              "position": "adc",
+              "source_ids": [
+                "march"
+              ],
+              "player_id": "0d681ab0-326f-51b6-b6ba-e8b40f3cad0a",
+              "external_player_id": "oe:player:3ace2e5d36ad46eb2aec2ad1c43d3c5",
+              "identity_status": "exact_unique_handle"
+            },
+            {
+              "name": "frosty",
+              "position": "support",
+              "source_ids": [
+                "march"
+              ],
+              "player_id": "ae4de9ae-541e-572e-99d8-4533ce25ed10",
+              "external_player_id": "oe:player:9d361f9d8214252ee571375f9105cb4",
+              "identity_status": "exact_unique_handle"
+            }
+          ]
+        },
+        {
+          "name": "Vivo Keyd Stars",
+          "players": [
+            {
+              "name": "Wizer",
+              "position": "top",
+              "source_ids": [
+                "march"
+              ],
+              "player_id": "7d2f23dc-2191-5c04-a96b-ae1d7142843c",
+              "external_player_id": "oe:player:840d0b77e71408d3da84e4f0cae4b73",
+              "identity_status": "exact_unique_handle"
+            },
+            {
+              "name": "Disamis",
+              "position": "jungle",
+              "source_ids": [
+                "march"
+              ],
+              "player_id": "781df45a-756e-56ff-8f50-70fa0f7dd072",
+              "external_player_id": "oe:player:946b74bfc34e861b344ae03700af039",
+              "identity_status": "exact_unique_handle"
+            },
+            {
+              "name": "Mireu",
+              "position": "mid",
+              "source_ids": [
+                "march"
+              ],
+              "player_id": "3523bc9e-2702-57f6-a5dd-5a2580e14b30",
+              "external_player_id": "oe:player:5b86bafc34d79c84a8847d29b64ca29",
+              "identity_status": "exact_unique_handle"
+            },
+            {
+              "name": "ceo",
+              "position": "adc",
+              "source_ids": [
+                "march"
+              ],
+              "player_id": "0b536dfe-430e-575b-aed8-b30dcdf7193d",
+              "external_player_id": "oe:player:219d2d945cfbd391d0ade5e352a1bc5",
+              "identity_status": "exact_unique_handle"
+            },
+            {
+              "name": "Kaiwing",
+              "position": "support",
+              "source_ids": [
+                "march"
+              ],
+              "player_id": "c7feca0f-9127-53a6-a3a7-b865150704a1",
+              "external_player_id": "oe:player:0103d21d116b61eb55fa351242208cf",
+              "identity_status": "exact_unique_handle"
+            }
+          ]
+        }
+      ]
+    },
     {
       "id": "cblol-2026-split2-opening",
       "region": "CBLOL",
@@ -554,6 +1514,70 @@
       "note": "Saída registrada em fonte secundária. Anúncio primário não acessível nesta consulta; destino atual não verificado.",
       "player_id": "2fdef06f-1c71-54f5-8b37-b5e9c1771891",
       "external_player_id": "oe:player:71b8101d78beb04a089caa90a8d9310",
+      "identity_status": "exact_unique_handle"
+    },
+    {
+      "name": "Keine",
+      "team": "paiN Gaming",
+      "kind": "bench_reported",
+      "reported_date": "2026-08-28",
+      "effective_date": null,
+      "source_ids": [
+        "namiru"
+      ],
+      "confidence": "reported",
+      "note": "Afastamento da escalação noticiado; não confirma rescisão de contrato.",
+      "position": "mid",
+      "player_id": "53cb0afc-af12-5805-a455-bfd327db3397",
+      "external_player_id": "oe:player:1b26a8bba6e841f1c375b283db5c1c6",
+      "identity_status": "exact_unique_handle"
+    },
+    {
+      "name": "Namiru",
+      "team": "paiN Gaming",
+      "kind": "promotion_reported",
+      "reported_date": "2026-08-28",
+      "effective_date": null,
+      "source_ids": [
+        "namiru"
+      ],
+      "confidence": "reported",
+      "note": "Promoção two-way para a rota do meio; não é contratação nova.",
+      "position": "mid",
+      "player_id": "93563854-1830-5a8d-851d-2661a546aeb4",
+      "external_player_id": "oe:player:efd1b76f52f29c9252d5375eea2b594",
+      "identity_status": "exact_unique_handle"
+    },
+    {
+      "name": "frosty",
+      "team": "RED Canids",
+      "kind": "departure_reported",
+      "reported_date": "2026-07-29",
+      "effective_date": null,
+      "source_ids": [
+        "frosty"
+      ],
+      "confidence": "reported",
+      "note": "Data da publicação; data efetiva não verificada.",
+      "position": "support",
+      "player_id": "ae4de9ae-541e-572e-99d8-4533ce25ed10",
+      "external_player_id": "oe:player:9d361f9d8214252ee571375f9105cb4",
+      "identity_status": "exact_unique_handle"
+    },
+    {
+      "name": "Manel",
+      "team": "RED Canids",
+      "kind": "promotion_reported",
+      "reported_date": "2026-08-09",
+      "effective_date": null,
+      "source_ids": [
+        "manel"
+      ],
+      "confidence": "reported",
+      "note": "Entrevista confirma atuação no principal desde a segunda semana; início exato não verificado.",
+      "position": "support",
+      "player_id": "9c5be745-c308-5079-bdb2-be382896d68a",
+      "external_player_id": "oe:player:323b1ce118ee27efaa0f0e2d163d31e",
       "identity_status": "exact_unique_handle"
     }
   ],

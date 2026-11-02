@@ -1,10 +1,10 @@
-# LoL Championship Manager — v0.3
+# LoL Championship Manager — v0.4
 
 Aplicação de scouting com React 19 + TypeScript + Vite + Tailwind, FastAPI e Supabase/PostgreSQL. Os dados competitivos reais ficam separados das futuras carreiras privadas. O importador e o motor Python anteriores foram reaproveitados; SQLite permanece como staging reproduzível. Não há simulador de partidas nesta versão.
 
 ## Executar localmente
 
-Requisitos: Python 3.10+ e Node.js compatível com Vite 8 (22.12+; entrega validada em Node 26.12 e Python 3.15). As dependências diretas estão fixadas e os locks foram incluídos.
+Requisitos: Python 3.12+ e Node.js compatível com Vite 8 (22.12+; entrega validada em Node 26.12 e Python 3.15). As dependências diretas estão fixadas e os locks foram incluídos.
 
 ```powershell
 python -m venv .venv
@@ -32,7 +32,7 @@ Caso o alias `python` da Microsoft Store esteja indisponível no Windows, use a 
 - Equipes do CBLOL com jogadores observados e data de corte; não é uma confirmação de contratos/escalação atual.
 - Login por e-mail/senha com Supabase Auth. O endpoint privado valida o token no Auth e delega o mesmo token ao banco para aplicar RLS. Contas precisam existir no projeto; não foi criada uma conta de teste remota. Gestão e criação de carreiras ficam para a próxima fase.
 
-**Cobertura:** 2025 e 2026, com 2026 parcial até 10/04/2026. Não representa elencos atuais de novembro. OVR é experimental e só aparece com suporte regional mínimo. Potencial, ADA e DEC permanecem ausentes. Forma é uma variação de proxy recente, não uma previsão.
+**Cobertura consolidada:** 2025 e 2026, com 2026 parcial até 22/07/2026 no conjunto global e 06/06/2026 no CBLOL. Para reproduzir a atualização posterior ao snapshot inicial, siga [a conciliação documentada](docs/VERIFICATION_V04.md). Não representa elencos atuais de novembro. OVR é experimental e só aparece com suporte regional mínimo. Potencial, ADA e DEC permanecem ausentes. Forma é uma variação de proxy recente, não uma previsão.
 
 ## Pipeline reproduzível
 
@@ -87,8 +87,12 @@ A lista, ficha, comparação e equipes incluem retratos oficiais quando disponí
 
 ## Elencos revisados
 
-A tela Equipes separa o histórico estatístico dos elencos anunciados. A revisão de 01/11/2026 acrescenta oito quintetos de abertura do CBLOL 2026 Split 2 (40 vagas) e cinco notícias de saída, com fontes e datas. Contratos vigentes em novembro ainda não estão integralmente verificados. Os ratings continuam no corte de abril. Veja [pesquisa, cobertura e limitações](docs/ROSTERS.md). Reimporte com `python -m backend.rosters config/rosters-reviewed.json`; API `/api/v3/roster-snapshots`.
+A curadoria consolidada de 02/11/2026 cobre oito equipes na Copa, Split 1 e Split 2 (120 vagas históricas), mais nove movimentações, com fontes e datas. Contratos vigentes em novembro ainda não estão integralmente verificados. Veja [pesquisa, cobertura e limitações](docs/VERIFICATION_V04.md). Reimporte com `python -m backend.rosters config/rosters-reviewed.json`; API `/api/v3/roster-snapshots`.
 
 ## Primeira entrega v0.4
 
-Novas telas: Elencos por data/competição, Central de transferências e Qualidade. O pipeline inspeciona candidatos antes da ingestão no staging, com hash e procedência. Consulte [execução, resultados e limites](docs/V04.md). Dados competitivos continuam até abril de 2026; nenhum rating foi atualizado nesta entrega. [Pull requests](https://github.com/brunopeeeh/lol-championship-manager/pulls) organizadas em etapas encadeadas para revisão.
+Novas telas: Elencos por data/competição, Central de transferências e Qualidade. O pipeline inspeciona candidatos antes da ingestão no staging, com hash e procedência. A entrega inicial usava o corte de abril; a consolidação acrescenta 3.643 partidas verificadas e recalcula as avaliações, com corte global de 22/07/2026 e CBLOL de 06/06/2026. Consulte [execução inicial](docs/V04.md) e [consolidação](docs/VERIFICATION_V04.md). [Pull requests](https://github.com/brunopeeeh/lol-championship-manager/pulls) organizadas em etapas encadeadas para revisão.
+
+## Consolidação de 02/11/2026
+
+Instalação limpa, reconstrução do staging, correções de configuração e nova fonte estatística foram auditadas. Consulte [verificação detalhada](docs/VERIFICATION_V04.md) e [estado operacional](docs/CONSOLIDATION_STATUS.md). A curadoria distingue observação em partida, anúncio e movimentação; contratos atuais continuam não verificados.

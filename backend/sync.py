@@ -6,6 +6,7 @@ import hashlib
 import json
 import logging
 import math
+import re
 from collections import Counter,defaultdict
 from datetime import datetime,timezone
 from pathlib import Path
@@ -45,9 +46,10 @@ def build(batch_size=250):
     by_game=defaultdict(list);by_player=defaultdict(list);team_homes=defaultdict(Counter)
     for source in source_rows:
         sha=source['sha256']
+        commit=re.search(r'githubusercontent\.com/[^/]+/[^/]+/([0-9a-f]{40})/',source['url'] or '')
         tables['data_sources'][sha]={'id':uid('source',sha),'name':source['filename'],'url':source['url'],
             'license':source['license'],'retrieved_at':source['retrieved_at'],'checksum':sha,
-            'metadata':{'provider':'Oracle’s Elixir via finalLOL','snapshot_commit':'192a8783278f7d1fb6e688d5525b702b8bbe6ec1','imported_at':now,'license_status':'unconfirmed'}}
+            'metadata':{'provider':'Imported match CSV; see source URL','snapshot_commit':commit.group(1) if commit else None,'imported_at':now,'license_status':'unconfirmed'}}
     for r in rows:
         by_game[r['game_id']].append(r);by_player[r['player_id']].append(r)
         region=homes.get((r['team_id'],r['season']))
@@ -63,8 +65,9 @@ def build(batch_size=250):
         tkey=f"{r['league']}|{r['season']}|{r['split']}"
         tables['tournaments'][tkey]={'id':uid('tournament',tkey),'name':r['league'],'season':r['season'],'split':r['split'] or None,
              'external_id':tkey,'region_id':uid('region',homes[(r['team_id'],r['season'])]) if r['league'] not in {'MSI','WCS','WLDS','FST','EWC','LTA','Americas Cup','DCUP','ASIA MASTER','KESPA'} and (r['team_id'],r['season']) in homes else None}
-        m=r['metrics'];source=origins.get((r['game_id'],r['player_id']))
+        m=r['metrics'];source=origins.get((r['game_id'],m.get('_provider_player_id',r['player_id'])))
         raw={**m,'side':r['side'],'result':r['result'],'external_player_id':r['player_id'],
+             'provider_player_id':m.get('_provider_player_id',r['player_id']),
              'external_team_id':r['team_id'],'source_id':uid('source',source['sha256']) if source else None,
              'source_sha256':source['sha256'] if source else None,'league':r['league'],'season':r['season'],'split':r['split']}
         tables['player_match_stats'][(gid,pid)]={'match_id':gid,'player_id':pid,'team_id':tid,'position':r['position'].upper(),
@@ -77,7 +80,7 @@ def build(batch_size=250):
         first=game[0];sides={side:{r['team_id'] for r in game if r['side']==side} for side in ('blue','red')}
         if any(len(t)!=1 for t in sides.values()):raise ValueError(f'Inconsistent teams: {gid}')
         winners={r['team_id'] for r in game if r['result']==1}
-        source=origins.get((first['game_id'],first['player_id']))
+        source=origins.get((first['game_id'],first['metrics'].get('_provider_player_id',first['player_id'])))
         key=f"{first['league']}|{first['season']}|{first['split']}"
         duration=first['metrics'].get('duration')
         tables['matches'][gid]={'id':uid('match',gid),'external_id':gid,'tournament_id':uid('tournament',key),
@@ -147,6 +150,7 @@ def sql_batch(index):
     conflict='match_id,player_id' if table=='player_match_stats' else 'id'
     action='DO NOTHING'
     if table=='champion_proficiency': action='DO UPDATE SET games=excluded.games,score=excluded.score,model_id=excluded.model_id'
+    if table=='rosters': action='DO UPDATE SET end_date=GREATEST(rosters.end_date,excluded.end_date)'
     return f'INSERT INTO public."{table}" ({quoted}) SELECT {quoted} FROM jsonb_populate_recordset(NULL::public."{table}",$lcm${payload}$lcm$::jsonb) ON CONFLICT ({conflict}) {action};'
 
 def main():
@@ -159,9 +163,17 @@ def main():
         folder=ROOT/'data'/'supabase-import';manifest=json.loads((folder/'manifest.json').read_text(encoding='utf-8'))
         for i,batch in enumerate(manifest['batches']):
             records=json.loads((folder/batch['file']).read_text(encoding='utf-8'))
+            if batch['table']=='rosters':
+                # Preserve the longest observed interval when importing an older package.
+                for start in range(0,len(records),50):
+                    part=records[start:start+50]
+                    known=request('GET','/rest/v1/rosters',admin=True,params={'select':'id,end_date','id':'in.('+','.join(r['id'] for r in part)+')'}).json()
+                    ends={r['id']:r['end_date'] for r in known if r.get('end_date')}
+                    for r in part:
+                        if ends.get(r['id']) and (not r.get('end_date') or ends[r['id']]>r['end_date']):r['end_date']=ends[r['id']]
             conflict='match_id,player_id' if batch['table']=='player_match_stats' else 'id'
             request('POST','/rest/v1/'+batch['table'],params={'on_conflict':conflict},json=records,admin=True,
-                headers={'Prefer':'resolution='+('merge-duplicates' if batch['table']=='champion_proficiency' else 'ignore-duplicates')+',return=minimal'})
+                headers={'Prefer':'resolution='+('merge-duplicates' if batch['table'] in ('champion_proficiency','rosters') else 'ignore-duplicates')+',return=minimal'})
             logging.info(json.dumps({'event':'batch_imported','batch':i,'table':batch['table'],'rows':len(records)}))
         expected=manifest['counts']['player_ratings']
         check=request('GET','/rest/v1/player_ratings',params={'model_id':'eq.'+manifest['model_id'],'select':'id','limit':1},admin=True,headers={'Prefer':'count=exact'})

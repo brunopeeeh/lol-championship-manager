@@ -36,9 +36,30 @@ def download(year,root=None):
 def main():
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('--year',choices=list(FILES),type=int,action='append')
+    p.add_argument('--candidate',help='Explicit audited candidate from config/datasets.json; never assumes latest data')
     args=p.parse_args()
+    if args.candidate:
+        print(json.dumps(download_candidate(args.candidate)));return
     for year in args.year or FILES:
         print(json.dumps(download(year)))
+
+def download_candidate(name):
+    root=Path(__file__).resolve().parent.parent
+    profiles=json.loads((root/'config'/'datasets.json').read_text(encoding='utf-8'))
+    if name not in profiles:raise ValueError('Unknown audited candidate')
+    profile=profiles[name];folder=root/'data'/'candidates';folder.mkdir(parents=True,exist_ok=True)
+    path=folder/(name+'.csv')
+    if not path.exists():
+        partial=path.with_suffix('.part')
+        with urllib.request.urlopen(profile['url'],timeout=90) as response,partial.open('wb') as f:
+            while block:=response.read(1024*1024):f.write(block)
+        if partial.stat().st_size!=profile['bytes'] or hashlib.sha256(partial.read_bytes()).hexdigest()!=profile['sha256']:
+            partial.unlink();raise ValueError('Candidate checksum/size mismatch')
+        partial.replace(path)
+    if path.stat().st_size!=profile['bytes'] or hashlib.sha256(path.read_bytes()).hexdigest()!=profile['sha256']:
+        raise ValueError('Existing candidate differs from audited snapshot')
+    return {**profile,'file':str(path),'status':'verified_candidate'}
+
 
 if __name__=='__main__':
     main()

@@ -1,6 +1,6 @@
 {
-  "reviewed_at": "2026-11-01",
-  "scope": "CBLOL; announced opening roster, not complete November contracts",
+  "reviewed_at": "2026-11-02",
+  "scope": "CBLOL 2026: observed Cup lineups, opening announcements for Splits 1/2 and dated editorial events; not current contracts",
   "sources": {
     "july": {
       "url": "https://maisesports.com.br/cblol-2026-veja-o-que-mudou-nas-escalacoes-dos-times-para-o-2-split",
@@ -25,9 +25,729 @@
       "retrieved_at": "2026-11-01",
       "type": "secondary_roster_tracker",
       "license": "no open redistribution license confirmed"
+    },
+    "march": {
+      "url": "https://maisesports.com.br/cblol-2026-red-confirma-zynts-como-titular-veja-todas-as-line-ups",
+      "provider": "Mais Esports",
+      "published_at": "2026-03-27",
+      "retrieved_at": "2026-11-02",
+      "type": "editorial_report",
+      "license": "reuse license unconfirmed"
+    },
+    "namiru": {
+      "url": "https://www.pichauarena.com.br/lol/pain-gaming-mudanca-cblol/",
+      "provider": "Pichau Arena",
+      "published_at": "2026-08-28",
+      "retrieved_at": "2026-11-02",
+      "type": "editorial_report",
+      "license": "reuse license unconfirmed"
+    },
+    "manel": {
+      "url": "https://www.sheepesports.com/pt/articles/it-s-my-time-manel-talks-about-his-cblol-debut-and-fast-growth-at-red/pt",
+      "provider": "Sheep Esports (entrevista)",
+      "published_at": "2026-08-09",
+      "retrieved_at": "2026-11-02",
+      "type": "editorial_report",
+      "license": "reuse license unconfirmed"
+    },
+    "frosty": {
+      "url": "https://hubinsider.substack.com/p/cblol-2026-entenda-a-saida-do-frosty",
+      "provider": "HUB Insider",
+      "published_at": "2026-07-29",
+      "retrieved_at": "2026-11-02",
+      "type": "editorial_report",
+      "license": "reuse license unconfirmed"
+    },
+    "cup_csv": {
+      "url": "https://raw.githubusercontent.com/twodotone/finalLOL/192a8783278f7d1fb6e688d5525b702b8bbe6ec1/data/csv/2026_LoL_esports_match_data_from_OraclesElixir.csv",
+      "provider": "Oracle’s Elixir via finalLOL",
+      "published_at": null,
+      "retrieved_at": "2026-11-02",
+      "type": "match_observation",
+      "license": "reuse license unconfirmed"
     }
   },
   "snapshots": [
+    {
+      "id": "cblol-2026-cup-first-observed",
+      "region": "CBLOL",
+      "season": 2026,
+      "competition": "Copa CBLOL 2026",
+      "reference_date": "2026-01-17",
+      "status": "observed_lineups",
+      "note": "Escalação da primeira partida observada de cada time na Copa. Não é anúncio de contratos; data e partida individuais preservadas.",
+      "teams": [
+        {
+          "name": "FURIA",
+          "observed_at": "2026-01-17 18:27:20",
+          "game_id": "LOLTMNT03_337829",
+          "players": [
+            {
+              "name": "Guigo",
+              "position": "top",
+              "source_ids": [
+                "cup_csv"
+              ]
+            },
+            {
+              "name": "Tatu",
+              "position": "jungle",
+              "source_ids": [
+                "cup_csv"
+              ]
+            },
+            {
+              "name": "Tutsz",
+              "position": "mid",
+              "source_ids": [
+                "cup_csv"
+              ]
+            },
+            {
+              "name": "Ayu",
+              "position": "adc",
+              "source_ids": [
+                "cup_csv"
+              ]
+            },
+            {
+              "name": "JoJo",
+              "position": "support",
+              "source_ids": [
+                "cup_csv"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Fluxo W7M",
+          "observed_at": "2026-01-17 17:20:13",
+          "game_id": "LOLTMNT03_336773",
+          "players": [
+            {
+              "name": "curty",
+              "position": "top",
+              "source_ids": [
+                "cup_csv"
+              ]
+            },
+            {
+              "name": "Peach",
+              "position": "jungle",
+              "source_ids": [
+                "cup_csv"
+              ]
+            },
+            {
+              "name": "Hauz",
+              "position": "mid",
+              "source_ids": [
+                "cup_csv"
+              ]
+            },
+            {
+              "name": "BAO",
+              "position": "adc",
+              "source_ids": [
+                "cup_csv"
+              ]
+            },
+            {
+              "name": "ProDelta",
+              "position": "support",
+              "source_ids": [
+                "cup_csv"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "LOUD",
+          "observed_at": "2026-01-17 18:27:20",
+          "game_id": "LOLTMNT03_337829",
+          "players": [
+            {
+              "name": "xyno",
+              "position": "top",
+              "source_ids": [
+                "cup_csv"
+              ]
+            },
+            {
+              "name": "YoungJae",
+              "position": "jungle",
+              "source_ids": [
+                "cup_csv"
+              ]
+            },
+            {
+              "name": "Mago",
+              "position": "mid",
+              "source_ids": [
+                "cup_csv"
+              ]
+            },
+            {
+              "name": "Bull",
+              "position": "adc",
+              "source_ids": [
+                "cup_csv"
+              ]
+            },
+            {
+              "name": "RedBert",
+              "position": "support",
+              "source_ids": [
+                "cup_csv"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "LEVIATÁN",
+          "observed_at": "2026-01-17 20:16:54",
+          "game_id": "LOLTMNT03_337847",
+          "players": [
+            {
+              "name": "Devost",
+              "position": "top",
+              "source_ids": [
+                "cup_csv"
+              ]
+            },
+            {
+              "name": "Booki",
+              "position": "jungle",
+              "source_ids": [
+                "cup_csv"
+              ]
+            },
+            {
+              "name": "Enga",
+              "position": "mid",
+              "source_ids": [
+                "cup_csv"
+              ]
+            },
+            {
+              "name": "ceo",
+              "position": "adc",
+              "source_ids": [
+                "cup_csv"
+              ]
+            },
+            {
+              "name": "TopLop",
+              "position": "support",
+              "source_ids": [
+                "cup_csv"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "LØS",
+          "observed_at": "2026-01-17 19:25:07",
+          "game_id": "LOLTMNT03_337841",
+          "players": [
+            {
+              "name": "Zest",
+              "position": "top",
+              "source_ids": [
+                "cup_csv"
+              ]
+            },
+            {
+              "name": "Drakehero",
+              "position": "jungle",
+              "source_ids": [
+                "cup_csv"
+              ]
+            },
+            {
+              "name": "Feisty",
+              "position": "mid",
+              "source_ids": [
+                "cup_csv"
+              ]
+            },
+            {
+              "name": "Duduhh",
+              "position": "adc",
+              "source_ids": [
+                "cup_csv"
+              ]
+            },
+            {
+              "name": "Ackerman",
+              "position": "support",
+              "source_ids": [
+                "cup_csv"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "RED Canids",
+          "observed_at": "2026-01-17 17:20:13",
+          "game_id": "LOLTMNT03_336773",
+          "players": [
+            {
+              "name": "fNb",
+              "position": "top",
+              "source_ids": [
+                "cup_csv"
+              ]
+            },
+            {
+              "name": "Curse",
+              "position": "jungle",
+              "source_ids": [
+                "cup_csv"
+              ]
+            },
+            {
+              "name": "Kaze",
+              "position": "mid",
+              "source_ids": [
+                "cup_csv"
+              ]
+            },
+            {
+              "name": "Rabelo",
+              "position": "adc",
+              "source_ids": [
+                "cup_csv"
+              ]
+            },
+            {
+              "name": "frosty",
+              "position": "support",
+              "source_ids": [
+                "cup_csv"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Vivo Keyd Stars",
+          "observed_at": "2026-01-17 16:19:20",
+          "game_id": "LOLTMNT03_337813",
+          "players": [
+            {
+              "name": "Boal",
+              "position": "top",
+              "source_ids": [
+                "cup_csv"
+              ]
+            },
+            {
+              "name": "Disamis",
+              "position": "jungle",
+              "source_ids": [
+                "cup_csv"
+              ]
+            },
+            {
+              "name": "Mireu",
+              "position": "mid",
+              "source_ids": [
+                "cup_csv"
+              ]
+            },
+            {
+              "name": "Morttheus",
+              "position": "adc",
+              "source_ids": [
+                "cup_csv"
+              ]
+            },
+            {
+              "name": "Kaiwing",
+              "position": "support",
+              "source_ids": [
+                "cup_csv"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "paiN Gaming",
+          "observed_at": "2026-01-17 16:19:20",
+          "game_id": "LOLTMNT03_337813",
+          "players": [
+            {
+              "name": "Robo",
+              "position": "top",
+              "source_ids": [
+                "cup_csv"
+              ]
+            },
+            {
+              "name": "CarioK",
+              "position": "jungle",
+              "source_ids": [
+                "cup_csv"
+              ]
+            },
+            {
+              "name": "tinowns",
+              "position": "mid",
+              "source_ids": [
+                "cup_csv"
+              ]
+            },
+            {
+              "name": "Marvin",
+              "position": "adc",
+              "source_ids": [
+                "cup_csv"
+              ]
+            },
+            {
+              "name": "Kuri",
+              "position": "support",
+              "source_ids": [
+                "cup_csv"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cblol-2026-split1-opening",
+      "region": "CBLOL",
+      "season": 2026,
+      "competition": "CBLOL 2026 Split 1",
+      "reference_date": "2026-03-27",
+      "status": "announced_opening_roster",
+      "note": "Quintetos anunciados para a abertura; reservas e substituições posteriores não são contratos atuais.",
+      "teams": [
+        {
+          "name": "Fluxo W7M",
+          "players": [
+            {
+              "name": "curty",
+              "position": "top",
+              "source_ids": [
+                "march"
+              ]
+            },
+            {
+              "name": "Peach",
+              "position": "jungle",
+              "source_ids": [
+                "march"
+              ]
+            },
+            {
+              "name": "cody",
+              "position": "mid",
+              "source_ids": [
+                "march"
+              ]
+            },
+            {
+              "name": "BAO",
+              "position": "adc",
+              "source_ids": [
+                "march"
+              ]
+            },
+            {
+              "name": "Momochi",
+              "position": "support",
+              "source_ids": [
+                "march"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "FURIA",
+          "players": [
+            {
+              "name": "Guigo",
+              "position": "top",
+              "source_ids": [
+                "march"
+              ]
+            },
+            {
+              "name": "Tatu",
+              "position": "jungle",
+              "source_ids": [
+                "march"
+              ]
+            },
+            {
+              "name": "Tutsz",
+              "position": "mid",
+              "source_ids": [
+                "march"
+              ]
+            },
+            {
+              "name": "Ayu",
+              "position": "adc",
+              "source_ids": [
+                "march"
+              ]
+            },
+            {
+              "name": "JoJo",
+              "position": "support",
+              "source_ids": [
+                "march"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "LEVIATÁN",
+          "players": [
+            {
+              "name": "Devost",
+              "position": "top",
+              "source_ids": [
+                "march"
+              ]
+            },
+            {
+              "name": "Booki",
+              "position": "jungle",
+              "source_ids": [
+                "march"
+              ]
+            },
+            {
+              "name": "Enga",
+              "position": "mid",
+              "source_ids": [
+                "march"
+              ]
+            },
+            {
+              "name": "Snaker",
+              "position": "adc",
+              "source_ids": [
+                "march"
+              ]
+            },
+            {
+              "name": "TopLop",
+              "position": "support",
+              "source_ids": [
+                "march"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "LØS",
+          "players": [
+            {
+              "name": "Zest",
+              "position": "top",
+              "source_ids": [
+                "march"
+              ]
+            },
+            {
+              "name": "Drakehero",
+              "position": "jungle",
+              "source_ids": [
+                "march"
+              ]
+            },
+            {
+              "name": "Feisty",
+              "position": "mid",
+              "source_ids": [
+                "march"
+              ]
+            },
+            {
+              "name": "Duduhh",
+              "position": "adc",
+              "source_ids": [
+                "march"
+              ]
+            },
+            {
+              "name": "Ackerman",
+              "position": "support",
+              "source_ids": [
+                "march"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "LOUD",
+          "players": [
+            {
+              "name": "xyno",
+              "position": "top",
+              "source_ids": [
+                "march"
+              ]
+            },
+            {
+              "name": "YoungJae",
+              "position": "jungle",
+              "source_ids": [
+                "march"
+              ]
+            },
+            {
+              "name": "Envy",
+              "position": "mid",
+              "source_ids": [
+                "march"
+              ],
+              "reviewed_external_player_id": "oe:player:a672b5bc1c212a6922418fad18734c1",
+              "identity_review_note": "Provider ID observed for LOUD mid in the match CSV; do not merge the homonymous identity."
+            },
+            {
+              "name": "Bull",
+              "position": "adc",
+              "source_ids": [
+                "march"
+              ]
+            },
+            {
+              "name": "RedBert",
+              "position": "support",
+              "source_ids": [
+                "march"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "paiN Gaming",
+          "players": [
+            {
+              "name": "Robo",
+              "position": "top",
+              "source_ids": [
+                "march"
+              ]
+            },
+            {
+              "name": "Samkz",
+              "position": "jungle",
+              "source_ids": [
+                "march"
+              ]
+            },
+            {
+              "name": "Keine",
+              "position": "mid",
+              "source_ids": [
+                "march"
+              ]
+            },
+            {
+              "name": "Trigger",
+              "position": "adc",
+              "source_ids": [
+                "march"
+              ]
+            },
+            {
+              "name": "Kuri",
+              "position": "support",
+              "source_ids": [
+                "march"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "RED Canids",
+          "players": [
+            {
+              "name": "zynts",
+              "position": "top",
+              "source_ids": [
+                "march"
+              ]
+            },
+            {
+              "name": "STEPZ",
+              "position": "jungle",
+              "source_ids": [
+                "march"
+              ]
+            },
+            {
+              "name": "Kaze",
+              "position": "mid",
+              "source_ids": [
+                "march"
+              ]
+            },
+            {
+              "name": "Rabelo",
+              "position": "adc",
+              "source_ids": [
+                "march"
+              ]
+            },
+            {
+              "name": "frosty",
+              "position": "support",
+              "source_ids": [
+                "march"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Vivo Keyd Stars",
+          "players": [
+            {
+              "name": "Wizer",
+              "position": "top",
+              "source_ids": [
+                "march"
+              ]
+            },
+            {
+              "name": "Disamis",
+              "position": "jungle",
+              "source_ids": [
+                "march"
+              ]
+            },
+            {
+              "name": "Mireu",
+              "position": "mid",
+              "source_ids": [
+                "march"
+              ]
+            },
+            {
+              "name": "ceo",
+              "position": "adc",
+              "source_ids": [
+                "march"
+              ]
+            },
+            {
+              "name": "Kaiwing",
+              "position": "support",
+              "source_ids": [
+                "march"
+              ]
+            }
+          ]
+        }
+      ]
+    },
     {
       "id": "cblol-2026-split2-opening",
       "region": "CBLOL",
@@ -420,6 +1140,58 @@
       ],
       "confidence": "secondary_report",
       "note": "Saída registrada em fonte secundária. Anúncio primário não acessível nesta consulta; destino atual não verificado."
+    },
+    {
+      "name": "Keine",
+      "team": "paiN Gaming",
+      "kind": "bench_reported",
+      "reported_date": "2026-08-28",
+      "effective_date": null,
+      "source_ids": [
+        "namiru"
+      ],
+      "confidence": "reported",
+      "note": "Afastamento da escalação noticiado; não confirma rescisão de contrato.",
+      "position": "mid"
+    },
+    {
+      "name": "Namiru",
+      "team": "paiN Gaming",
+      "kind": "promotion_reported",
+      "reported_date": "2026-08-28",
+      "effective_date": null,
+      "source_ids": [
+        "namiru"
+      ],
+      "confidence": "reported",
+      "note": "Promoção two-way para a rota do meio; não é contratação nova.",
+      "position": "mid"
+    },
+    {
+      "name": "frosty",
+      "team": "RED Canids",
+      "kind": "departure_reported",
+      "reported_date": "2026-07-29",
+      "effective_date": null,
+      "source_ids": [
+        "frosty"
+      ],
+      "confidence": "reported",
+      "note": "Data da publicação; data efetiva não verificada.",
+      "position": "support"
+    },
+    {
+      "name": "Manel",
+      "team": "RED Canids",
+      "kind": "promotion_reported",
+      "reported_date": "2026-08-09",
+      "effective_date": null,
+      "source_ids": [
+        "manel"
+      ],
+      "confidence": "reported",
+      "note": "Entrevista confirma atuação no principal desde a segunda semana; início exato não verificado.",
+      "position": "support"
     }
   ]
 }

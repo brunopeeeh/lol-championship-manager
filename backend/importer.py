@@ -16,7 +16,8 @@ POSITIONS = {'top':'top','jng':'jungle','jg':'jungle','jungle':'jungle','mid':'m
              'middle':'mid','bot':'adc','bottom':'adc','adc':'adc','sup':'support','support':'support'}
 LEAGUES = {'cblol':'CBLOL','lck':'LCK','lpl':'LPL','lec':'LEC','lcs':'LCS',
            'lta s':'LTA S','lta n':'LTA N','lta':'LTA','lcp':'LCP',
-           'msi':'MSI','worlds':'WCS','wcs':'WCS','fst':'FST','ewc':'EWC','americas cup':'Americas Cup'}
+           'msi':'MSI','worlds':'WCS','wcs':'WCS','fst':'FST','ewc':'EWC','americas cup':'Americas Cup',
+           'ac':'Americas Cup','kespa cup':'KESPA'}
 FIELDS = {
  'gd15':('golddiffat15','gdat15'), 'cs10':('csdiffat10','csdat10'),
  'xp15':('xpdiffat15','xpdat15'), 'dpm':('dpm',), 'kp':('kp',),
@@ -98,7 +99,8 @@ def normalize_row(row, aliases=None):
                 result=int(result) if result in (0,1) else None, metrics=metrics), None
 
 def load_csv(path, league=None, season=None, *, source_url=None, retrieved_at=None,
-             license='unknown; redistribution not validated', aliases=None):
+             license='unknown; redistribution not validated', aliases=None, after=None):
+    after=datetime.fromisoformat(after).replace(tzinfo=None).isoformat(sep=' ') if after else None
     init()
     path = Path(path)
     sha = hashlib.sha256(path.read_bytes()).hexdigest()
@@ -117,6 +119,9 @@ def load_csv(path, league=None, season=None, *, source_url=None, retrieved_at=No
             r, reason = normalize_row(raw, aliases)
             if reason:
                 counts[reason] += 1
+                continue
+            if after and r['date']<=after:
+                counts['filtered_before_cutoff']+=1
                 continue
             if (league and r['league'].casefold()!=league.casefold()) or (season and r['season']!=int(season)):
                 counts['filtered'] += 1
@@ -157,13 +162,14 @@ def main():
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument('files',nargs='+')
     p.add_argument('--league'); p.add_argument('--season',type=int)
+    p.add_argument('--after',help='Import only observations after this ISO timestamp; retain full source checksum')
     p.add_argument('--source-url'); p.add_argument('--retrieved-at'); p.add_argument('--aliases')
     p.add_argument('--license',default='unknown; redistribution not validated')
     p.add_argument('--no-ratings',action='store_true')
     a = p.parse_args()
     aliases = json.loads(Path(a.aliases).read_text(encoding='utf-8')) if a.aliases else None
     for path in a.files:
-        print(path, load_csv(path,a.league,a.season,source_url=a.source_url,retrieved_at=a.retrieved_at,license=a.license,aliases=aliases))
+        print(path, load_csv(path,a.league,a.season,source_url=a.source_url,retrieved_at=a.retrieved_at,license=a.license,aliases=aliases,after=a.after))
     if not a.no_ratings:
         from .ratings import rebuild
         print(rebuild())

@@ -1,0 +1,21 @@
+{
+  "reviewed_at": "2026-11-02",
+  "aliases": [
+    {
+      "provider_id": "oe:player:3d44f54d2b0fa13b698040cb51d09db",
+      "canonical_id": "oe:player:2c777c5adf181aee4a6aa77ae4e3f0b",
+      "name": "ZekaS",
+      "reason": "César Berteli França; continuity Corinthians, Keyd Academy and Keyd main roster",
+      "sources": ["https://liquipedia.net/leagueoflegends/Zekas", "https://lolesports.com/en-US/teams/vivo-keyd"]
+    },
+    {
+      "provider_id": "oe:player:7edb662a8ada86b7a8a09410b3492d5",
+      "canonical_id": "oe:player:0597ac632095e480098c6cb5c1ae596",
+      "name": "ZOEN",
+      "reason": "Enzo Ganino; continuity INFINITY, Isurus and paiN Academy",
+      "sources": ["https://lol.fandom.com/wiki/Zoen_(Enzo_Ganino)", "https://ensigame.com/teams/lol/pain-gaming-academy"]
+    }
+  ],
+  "separate_homonyms": ["Envy: LOUD mid laner and Polish Onion/Priority player are distinct"],
+  "scope": "Reviewed provider ID changes involving CBLOL histories; no automatic worldwide handle merges"
+}

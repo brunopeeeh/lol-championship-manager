@@ -40,12 +40,13 @@ def test_duplicate_starting_slot_rejected():
 def test_real_roster_api_excludes_wizer_from_split2_and_keeps_departure_evidence():
     # Source-backed regression: old match snapshot must not define the newer roster.
     catalog=load_catalog()
-    assert len(catalog['snapshots'][0]['teams'])==8 and not catalog['unresolved']
+    assert len(catalog['snapshots'])==3 and not catalog['unresolved']
     with TestClient(app) as client:
         response=client.get('/api/v3/roster-snapshots')
     assert response.status_code==200
     data=response.json()
-    team=next(t for t in data['snapshots'][0]['teams'] if t['name']=='Vivo Keyd Stars')
+    snapshot=next(s for s in data['snapshots'] if s['competition']=='CBLOL 2026 Split 2')
+    team=next(t for t in snapshot['teams'] if t['name']=='Vivo Keyd Stars')
     assert [p['name'] for p in team['players']]==['ZekaS','Disamis','Mireu','Jeskla','scamber']
     assert team['players'][0]['later_events'][0]['reported_date']=='2026-10-06'
     assert all(p['overall'] is None and p['games'] is None for p in team['players'])

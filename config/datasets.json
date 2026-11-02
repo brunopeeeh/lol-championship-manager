@@ -1,0 +1,10 @@
+{
+  "heimerdinger-2026-a6fd394": {
+    "url": "https://raw.githubusercontent.com/sunrisesineast/heimerdinger/a6fd39443d39467e295f98c67a78280141d77a51/data/raw/2026_LoL_esports_match_data_from_OraclesElixir.csv",
+    "sha256": "7fbb37c6cf6c2bac6bd0efb7252e7f9f85d9d298c7411484192a311b07d10bbb",
+    "bytes": 50694201,
+    "season": 2026,
+    "through": "2026-07-22 20:11:01",
+    "license": "unconfirmed; mirror attribution is not redistribution permission"
+  }
+}
