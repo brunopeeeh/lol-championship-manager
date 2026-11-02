@@ -1,7 +1,3 @@
-# Base v0.3 para revisão
-
-Código existente importado para revisão antes da v0.4. Arquivos de ambiente, bancos, CSVs e pacotes de importação locais não estão neste repositório. Configure as variáveis de exemplo e execute download/importação antes de consultar estatísticas locais.
-
 # LoL Championship Manager — v0.3
 
 Aplicação de scouting com React 19 + TypeScript + Vite + Tailwind, FastAPI e Supabase/PostgreSQL. Os dados competitivos reais ficam separados das futuras carreiras privadas. O importador e o motor Python anteriores foram reaproveitados; SQLite permanece como staging reproduzível. Não há simulador de partidas nesta versão.
@@ -92,3 +88,7 @@ A lista, ficha, comparação e equipes incluem retratos oficiais quando disponí
 ## Elencos revisados
 
 A tela Equipes separa o histórico estatístico dos elencos anunciados. A revisão de 01/11/2026 acrescenta oito quintetos de abertura do CBLOL 2026 Split 2 (40 vagas) e cinco notícias de saída, com fontes e datas. Contratos vigentes em novembro ainda não estão integralmente verificados. Os ratings continuam no corte de abril. Veja [pesquisa, cobertura e limitações](docs/ROSTERS.md). Reimporte com `python -m backend.rosters config/rosters-reviewed.json`; API `/api/v3/roster-snapshots`.
+
+## Primeira entrega v0.4
+
+Novas telas: Elencos por data/competição, Central de transferências e Qualidade. O pipeline inspeciona candidatos antes da ingestão no staging, com hash e procedência. Consulte [execução, resultados e limites](docs/V04.md). Dados competitivos continuam até abril de 2026; nenhum rating foi atualizado nesta entrega. [Pull requests](https://github.com/brunopeeeh/lol-championship-manager/pulls) organizadas em etapas encadeadas para revisão.
