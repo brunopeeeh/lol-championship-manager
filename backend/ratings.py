@@ -6,6 +6,7 @@ from collections import defaultdict, Counter
 from .db import init, connect
 from pathlib import Path
 from .opponents import opponent_context
+from .identities import resolve_rows
 
 ATTRS = ('mec','lan','agr','sob','mac','vis','obj','tf','con','ver','ada','dec')
 WEIGHTS = {
@@ -52,7 +53,7 @@ def read_rows(c):
         JOIN identities_v3 i ON i.id=o.player_id ORDER BY g.date,g.id,o.player_id''')]
     for r in rows:
         r['metrics'] = json.loads(r.pop('metrics_json'))
-    return rows
+    return resolve_rows(rows)
 
 def home_regions(rows):
     counts = defaultdict(Counter)

@@ -1,5 +1,7 @@
 # Revisão de elencos — 01/11/2026
 
+Atualização de 02/11/2026: consulte [a consolidação e suas evidências](VERIFICATION_V04.md) para o estado posterior a esta entrega inicial.
+
 O espelho estatístico continua parado em abril: a API GitHub confirmou que `main` ainda aponta para [192a878, de 10/04/2026](https://github.com/twodotone/finalLOL/commit/192a8783278f7d1fb6e688d5525b702b8bbe6ec1). Baixar o mesmo arquivo não resolve transferências posteriores.
 
 ## Fontes verificadas

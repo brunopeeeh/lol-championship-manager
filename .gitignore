@@ -17,3 +17,8 @@ coverage/
 data/supabase-import/
 data/identity-review.json
 *.tsbuildinfo
+data/v04-baseline/
+data/verification-v04/
+data/consolidation/
+data/candidates/
+data/publication-*.json

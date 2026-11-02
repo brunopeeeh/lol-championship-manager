@@ -8,7 +8,10 @@ class DatabaseUnavailable(RuntimeError):
     pass
 
 def request(method,resource,*,params=None,json=None,token=None,admin=False,headers=None):
-    url,key=supabase_config(admin)
+    try:
+        url,key=supabase_config(admin)
+    except RuntimeError as exc:
+        raise DatabaseUnavailable('Supabase não configurado. Preencha URL e chave publicável ou selecione SQLite.') from exc
     h={'apikey':key,'Accept':'application/json',**(headers or {})}
     if token:
         h['Authorization']='Bearer '+token

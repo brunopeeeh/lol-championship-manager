@@ -9,7 +9,7 @@ from .rosters import load_catalog
 router = APIRouter(prefix='/api/v4')
 KINDS = {'departure_reported':'Saída noticiada', 'join_reported':'Entrada noticiada',
          'loan_reported':'Empréstimo noticiado', 'retirement_reported':'Aposentadoria noticiada',
-         'bench_reported':'Reserva noticiada'}
+         'bench_reported':'Reserva noticiada','promotion_reported':'Promoção noticiada'}
 
 
 def transfers_view(data, as_of, team=None, q='', kind=None):
@@ -37,10 +37,12 @@ def roster_at(data, as_of, competition=None, team=None):
                     snap['reference_date'] < e['reported_date'] <= as_of.isoformat()]
                 players.append({**person,'subsequent_events':events})
             selected[entry['name']]={'name':entry['name'],'competition':snap['competition'],
-                'reference_date':snap['reference_date'],'players':players,'status':'historical_announcement'}
+                'reference_date':snap['reference_date'],'players':players,'status':snap.get('status','historical_announcement'),
+                'observed_at':entry.get('observed_at'),'game_id':entry.get('game_id'),
+                'team_events':[e for e in data['events'] if e['team']==entry['name'] and snap['reference_date']<e['reported_date']<=as_of.isoformat()]}
     return {'items':list(selected.values()),'as_of':as_of.isoformat(),'sources':data['sources'],
         'competitions':sorted({s['competition'] for s in data['snapshots']}),
-        'warning':'Último anúncio disponível até a data escolhida. Não reconstrói contratos nem escalação vigente. Saídas posteriores aparecem sem apagar o histórico.'}
+        'warning':'Último registro histórico disponível até a data escolhida. Não reconstrói contratos nem escalação vigente. Movimentações posteriores aparecem sem apagar o histórico.'}
 
 
 @router.get('/transfers')

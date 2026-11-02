@@ -1,7 +1,7 @@
 export const attributes = {mec:'Mecânica',lan:'Laning',agr:'Agressividade',sob:'Sobrevivência',mac:'Macro',vis:'Visão',obj:'Objetivos',tf:'Teamfight',con:'Consistência',ver:'Versatilidade',ada:'Adaptação',dec:'Decisão'} as const;
 export type Attribute = keyof typeof attributes;
 export interface Portrait {image_url:string;source_url:string;provider:string;retrieved_at:string;note:string;rights_status:string;photo_season:number|null}
-export interface RosterSource {url:string;provider:string;published_at:string;retrieved_at:string;type:string}
+export interface RosterSource {url:string;provider:string;published_at:string|null;retrieved_at:string;type:string}
 export interface RosterEvent {name:string;team:string;kind:string;reported_date:string;effective_date:string|null;source_ids:string[];note:string;confidence:string}
 export interface RosterContext {current_team:null;current_status:string;snapshots:{team:string;competition:string;reference_date:string;source_ids:string[]}[];events:RosterEvent[];sources:Record<string,RosterSource>}
 export interface RosterCatalog {warning:string;reviewed_at:string;current_rosters_verified:boolean;sources:Record<string,RosterSource>;snapshots:{id:string;competition:string;reference_date:string;note:string;teams:{name:string;players:{name:string;position:string;player_id:string|null;identity_status:string;portrait?:Portrait|null;later_events:RosterEvent[]}[]}[]}[]}

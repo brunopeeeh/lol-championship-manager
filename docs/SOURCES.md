@@ -1,5 +1,7 @@
 # Auditoria de fontes — 01/11/2026
 
+Atualização de 02/11/2026: consulte [a consolidação e suas evidências](VERIFICATION_V04.md) para o estado posterior a esta entrega inicial.
+
 ## Finish-him/esports-data (Hugging Face)
 
 URL: https://huggingface.co/datasets/Finish-him/esports-data

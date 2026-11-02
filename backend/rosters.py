@@ -37,9 +37,13 @@ def compile_catalog(review, identities):
             if not record.get(key) or any(s not in result['sources'] for s in record[key]):
                 raise ValueError('Unknown or missing evidence source')
         people = by_name[normalized(record['name'])]
+        reviewed=record.get('reviewed_external_player_id')
+        if reviewed:
+            people=[p for p in people if p['id']==reviewed]
+            if len(people)!=1:raise ValueError('Reviewed provider ID does not match the named identity')
         record['player_id'] = uid('player', people[0]['id']) if len(people) == 1 else None
         record['external_player_id'] = people[0]['id'] if len(people) == 1 else None
-        record['identity_status'] = 'exact_unique_handle' if len(people) == 1 else 'needs_review'
+        record['identity_status'] = ('reviewed_external_id' if reviewed else 'exact_unique_handle') if len(people)==1 else 'needs_review'
         if len(people) != 1:
             result['unresolved'].append(record['name'])
     for snapshot in result['snapshots']:
@@ -56,7 +60,7 @@ def compile_catalog(review, identities):
                 resolve(person)
     for event in result['events']:
         date.fromisoformat(event['reported_date'])
-        if event['kind'] not in {'departure_reported','join_reported','loan_reported','retirement_reported','bench_reported'}:
+        if event['kind'] not in {'departure_reported','join_reported','loan_reported','retirement_reported','bench_reported','promotion_reported'}:
             raise ValueError('Unknown roster event')
         resolve(event)
     return result

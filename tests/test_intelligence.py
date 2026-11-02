@@ -7,13 +7,13 @@ from backend.rosters import load_catalog
 
 def test_timeline_uses_announcements_known_by_date_and_does_not_hide_departures():
     data=load_catalog()
-    assert roster_at(data,date(2026,4,1))['items']==[]
+    assert roster_at(data,date(2026,1,1))['items']==[]
     july=roster_at(data,date(2026,7,24),team='Vivo Keyd Stars')['items'][0]
     assert july['players'][0]['name']=='ZekaS'
     assert july['players'][0]['subsequent_events']==[]
     november=roster_at(data,date(2026,11,1),team='Vivo Keyd Stars')['items'][0]
     assert november['players'][0]['subsequent_events'][0]['reported_date']=='2026-10-06'
-    assert november['status']=='historical_announcement'
+    assert november['status']=='announced_opening_roster'
     assert roster_at(data,date(2026,11,1),competition='missing')['items']==[]
 
 
