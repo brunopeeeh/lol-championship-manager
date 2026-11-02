@@ -1,0 +1,19 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.test-tmp/
+data/test-*/
+data/raw/
+data/*.db
+*.pyc
+.env
+.env.*
+!.env.example
+!**/.env.example
+node_modules/
+frontend/dist/
+coverage/
+# Administrative export packages contain real esports data and are kept local.
+data/supabase-import/
+data/identity-review.json
+*.tsbuildinfo
