@@ -1,0 +1,561 @@
+{
+  "reviewed_at": "2026-11-01",
+  "scope": "CBLOL; announced opening roster, not complete November contracts",
+  "sources": {
+    "july": {
+      "url": "https://maisesports.com.br/cblol-2026-veja-o-que-mudou-nas-escalacoes-dos-times-para-o-2-split",
+      "provider": "Mais Esports",
+      "published_at": "2026-07-24",
+      "retrieved_at": "2026-11-01",
+      "type": "editorial_report",
+      "license": "all rights reserved; no open redistribution license confirmed"
+    },
+    "may": {
+      "url": "https://maisesports.com.br/cblol-2026-vivo-keyd-stars-oficializa-saida-de-kaiwing-e-wizer",
+      "provider": "Mais Esports",
+      "published_at": "2026-05-28",
+      "retrieved_at": "2026-11-01",
+      "type": "editorial_report",
+      "license": "all rights reserved; no open redistribution license confirmed"
+    },
+    "october": {
+      "url": "https://onivia.com/article/vks-roster-update-for-october-6",
+      "provider": "Onivia (cites Leaguepedia)",
+      "published_at": "2026-10-06",
+      "retrieved_at": "2026-11-01",
+      "type": "secondary_roster_tracker",
+      "license": "no open redistribution license confirmed"
+    }
+  },
+  "snapshots": [
+    {
+      "id": "cblol-2026-split2-opening",
+      "region": "CBLOL",
+      "season": 2026,
+      "competition": "CBLOL 2026 Split 2",
+      "reference_date": "2026-07-24",
+      "status": "announced_opening_roster",
+      "note": "Quintetos anunciados antes do início da etapa. Não inclui todas as substituições posteriores nem comprova vínculo atual.",
+      "teams": [
+        {
+          "name": "LEVIATÁN",
+          "players": [
+            {
+              "name": "Devost",
+              "position": "top",
+              "source_ids": [
+                "july"
+              ],
+              "player_id": "d3cb2e45-be6c-55c6-926c-bf805ce20a38",
+              "external_player_id": "oe:player:fd108dd07ee510bb9462127d183e1c5",
+              "identity_status": "exact_unique_handle"
+            },
+            {
+              "name": "Booki",
+              "position": "jungle",
+              "source_ids": [
+                "july"
+              ],
+              "player_id": "da52e2a0-1f0f-5281-ba58-1717088a0c09",
+              "external_player_id": "oe:player:bc5b7cd82bc9e26b3bbdeddeb73c7d8",
+              "identity_status": "exact_unique_handle"
+            },
+            {
+              "name": "Enga",
+              "position": "mid",
+              "source_ids": [
+                "july"
+              ],
+              "player_id": "cf54d317-0298-53f2-9061-8050bfa1237a",
+              "external_player_id": "oe:player:39d68aa20f0b0b1ddddb871a7b26fbf",
+              "identity_status": "exact_unique_handle"
+            },
+            {
+              "name": "Strensh",
+              "position": "adc",
+              "source_ids": [
+                "july"
+              ],
+              "player_id": "9ccbfd5c-6b7a-5008-a1d1-9c0641550c76",
+              "external_player_id": "oe:player:8b976d804f0b51e0dff5d24fc6ead77",
+              "identity_status": "exact_unique_handle"
+            },
+            {
+              "name": "Shiku",
+              "position": "support",
+              "source_ids": [
+                "july"
+              ],
+              "player_id": "94df6034-c5d8-5383-838a-e2e218150a9b",
+              "external_player_id": "oe:player:5a63f3e7e2b4282f07785cdc895d624",
+              "identity_status": "exact_unique_handle"
+            }
+          ]
+        },
+        {
+          "name": "FURIA",
+          "players": [
+            {
+              "name": "Guigo",
+              "position": "top",
+              "source_ids": [
+                "july"
+              ],
+              "player_id": "597d880f-f257-514a-bbd1-aa8f7524469a",
+              "external_player_id": "oe:player:d61d8a0b25028f787123bfff542d305",
+              "identity_status": "exact_unique_handle"
+            },
+            {
+              "name": "Tatu",
+              "position": "jungle",
+              "source_ids": [
+                "july"
+              ],
+              "player_id": "6c61b518-f586-5ffa-bef3-d1a3f7f7657b",
+              "external_player_id": "oe:player:6625d682ed10ef5e0e7c6c9e4dd2fc1",
+              "identity_status": "exact_unique_handle"
+            },
+            {
+              "name": "Tutsz",
+              "position": "mid",
+              "source_ids": [
+                "july"
+              ],
+              "player_id": "197299cd-f124-5fec-bac3-59ecb144ab4b",
+              "external_player_id": "oe:player:886e8205ac1b091dbf67dbae83b1544",
+              "identity_status": "exact_unique_handle"
+            },
+            {
+              "name": "Ayu",
+              "position": "adc",
+              "source_ids": [
+                "july"
+              ],
+              "player_id": "b2c1f171-3f9a-5ab8-a484-24f750e5e180",
+              "external_player_id": "oe:player:d7a904873d10637ef44afa9c1de83b3",
+              "identity_status": "exact_unique_handle"
+            },
+            {
+              "name": "JoJo",
+              "position": "support",
+              "source_ids": [
+                "july"
+              ],
+              "player_id": "e74a1e06-e1fc-5492-9e2b-ae2acc809692",
+              "external_player_id": "oe:player:cb4cd2fd258d5961d2f1c4815b04123",
+              "identity_status": "exact_unique_handle"
+            }
+          ]
+        },
+        {
+          "name": "paiN Gaming",
+          "players": [
+            {
+              "name": "Boal",
+              "position": "top",
+              "source_ids": [
+                "july"
+              ],
+              "player_id": "528c1a04-d6dc-5d8a-83b0-5d767c26b377",
+              "external_player_id": "oe:player:6daafc30b010acda4ebc20b6785cbc0",
+              "identity_status": "exact_unique_handle"
+            },
+            {
+              "name": "CarioK",
+              "position": "jungle",
+              "source_ids": [
+                "july"
+              ],
+              "player_id": "246ec4ef-bd82-5894-8217-739ad813b4c4",
+              "external_player_id": "oe:player:5e07433d52dbc7bbc4faaf9492dbd2c",
+              "identity_status": "exact_unique_handle"
+            },
+            {
+              "name": "Keine",
+              "position": "mid",
+              "source_ids": [
+                "july"
+              ],
+              "player_id": "53cb0afc-af12-5805-a455-bfd327db3397",
+              "external_player_id": "oe:player:1b26a8bba6e841f1c375b283db5c1c6",
+              "identity_status": "exact_unique_handle"
+            },
+            {
+              "name": "Hena",
+              "position": "adc",
+              "source_ids": [
+                "july"
+              ],
+              "player_id": "c0aead98-c63e-5e93-8b35-ba8fdd8c9057",
+              "external_player_id": "oe:player:9712524dc88851032bd53054f8b49b4",
+              "identity_status": "exact_unique_handle"
+            },
+            {
+              "name": "Ceos",
+              "position": "support",
+              "source_ids": [
+                "july"
+              ],
+              "player_id": "1344edb8-e80f-500f-bcb5-e31b2c676876",
+              "external_player_id": "oe:player:c88cada1696defe81464925789aa6d8",
+              "identity_status": "exact_unique_handle"
+            }
+          ]
+        },
+        {
+          "name": "LØS",
+          "players": [
+            {
+              "name": "Zest",
+              "position": "top",
+              "source_ids": [
+                "july"
+              ],
+              "player_id": "688aabf0-cb2f-5aba-ad93-51e21e68e236",
+              "external_player_id": "oe:player:786b5bbf7bbfb7b79379e8589a865c1",
+              "identity_status": "exact_unique_handle"
+            },
+            {
+              "name": "Curse",
+              "position": "jungle",
+              "source_ids": [
+                "july"
+              ],
+              "player_id": "db644e98-5cb7-570e-b933-0faf94d3dfda",
+              "external_player_id": "oe:player:9c51ed760409db6fa2a02fe8046f110",
+              "identity_status": "exact_unique_handle"
+            },
+            {
+              "name": "Feisty",
+              "position": "mid",
+              "source_ids": [
+                "july"
+              ],
+              "player_id": "39c4cd53-9885-516c-85b8-193a3ce3e539",
+              "external_player_id": "oe:player:d1ae0e2f9f3ac1e0e0cdcb86504ca77",
+              "identity_status": "exact_unique_handle"
+            },
+            {
+              "name": "Duduhh",
+              "position": "adc",
+              "source_ids": [
+                "july"
+              ],
+              "player_id": "8bbd36ca-7c98-5f4d-98ea-a155a2fdc2b7",
+              "external_player_id": "oe:player:b4179fdeda1242fcd94b82a5710dd3e",
+              "identity_status": "exact_unique_handle"
+            },
+            {
+              "name": "Ackerman",
+              "position": "support",
+              "source_ids": [
+                "july"
+              ],
+              "player_id": "3dcf6368-6b2d-57fd-9636-c8a5f6fcaa9a",
+              "external_player_id": "oe:player:145201414ecb853de684fbe7d6bb5b6",
+              "identity_status": "exact_unique_handle"
+            }
+          ]
+        },
+        {
+          "name": "Fluxo W7M",
+          "players": [
+            {
+              "name": "Zothve",
+              "position": "top",
+              "source_ids": [
+                "july"
+              ],
+              "player_id": "d5168a5a-815d-5479-9dd4-6fe2b2cb7f21",
+              "external_player_id": "oe:player:6e632d8dfe91b18ecbbcdc028094e5c",
+              "identity_status": "exact_unique_handle"
+            },
+            {
+              "name": "Peach",
+              "position": "jungle",
+              "source_ids": [
+                "july"
+              ],
+              "player_id": "8b2c51fe-b730-5ad8-b67f-c90b9ed771a2",
+              "external_player_id": "oe:player:53841c6e42a6ce77b6f3b80133c9342",
+              "identity_status": "exact_unique_handle"
+            },
+            {
+              "name": "cody",
+              "position": "mid",
+              "source_ids": [
+                "july"
+              ],
+              "player_id": "cbc05089-abb8-5da7-ad17-6d7fd8270061",
+              "external_player_id": "oe:player:a66db93c9f417a2500c24e689ba0ccc",
+              "identity_status": "exact_unique_handle"
+            },
+            {
+              "name": "BAO",
+              "position": "adc",
+              "source_ids": [
+                "july"
+              ],
+              "player_id": "0b3abafe-ff73-5d2c-80ca-76d934c8b68b",
+              "external_player_id": "oe:player:6c1d0c529e73fe4c8b9a5306867c4bf",
+              "identity_status": "exact_unique_handle"
+            },
+            {
+              "name": "Momochi",
+              "position": "support",
+              "source_ids": [
+                "july"
+              ],
+              "player_id": "e0494a61-8584-5f9f-be78-08ce31f85088",
+              "external_player_id": "oe:player:4dabc9746a3cae241a063d7a1e4d204",
+              "identity_status": "exact_unique_handle"
+            }
+          ]
+        },
+        {
+          "name": "LOUD",
+          "players": [
+            {
+              "name": "xyno",
+              "position": "top",
+              "source_ids": [
+                "july"
+              ],
+              "player_id": "58582fe6-6e61-596e-b724-9fd542b56f0f",
+              "external_player_id": "oe:player:fd0a05e90aefc83ac69d3352b0f0be6",
+              "identity_status": "exact_unique_handle"
+            },
+            {
+              "name": "Sinatra",
+              "position": "jungle",
+              "source_ids": [
+                "july"
+              ],
+              "player_id": "642f3c14-204d-57d6-b894-28315ddabcde",
+              "external_player_id": "oe:player:cce40f4b3dab509dbf23a9eaefed6ec",
+              "identity_status": "exact_unique_handle"
+            },
+            {
+              "name": "Kaze",
+              "position": "mid",
+              "source_ids": [
+                "july"
+              ],
+              "player_id": "f4e9312c-7468-5ede-8daa-919f4f4337b8",
+              "external_player_id": "oe:player:722c8846b5f0c756efb2affe467958a",
+              "identity_status": "exact_unique_handle"
+            },
+            {
+              "name": "Rabelo",
+              "position": "adc",
+              "source_ids": [
+                "july"
+              ],
+              "player_id": "0d681ab0-326f-51b6-b6ba-e8b40f3cad0a",
+              "external_player_id": "oe:player:3ace2e5d36ad46eb2aec2ad1c43d3c5",
+              "identity_status": "exact_unique_handle"
+            },
+            {
+              "name": "uZent",
+              "position": "support",
+              "source_ids": [
+                "july"
+              ],
+              "player_id": "61494186-1dc2-5da9-b821-4281121cca2a",
+              "external_player_id": "oe:player:f89b14820da11d8679cfd07da552ca5",
+              "identity_status": "exact_unique_handle"
+            }
+          ]
+        },
+        {
+          "name": "RED Canids",
+          "players": [
+            {
+              "name": "zynts",
+              "position": "top",
+              "source_ids": [
+                "july"
+              ],
+              "player_id": "ea097c46-876c-5633-8510-770c10b619ff",
+              "external_player_id": "oe:player:978c38ad839a85b4bdc8d3cd5e2c560",
+              "identity_status": "exact_unique_handle"
+            },
+            {
+              "name": "STEPZ",
+              "position": "jungle",
+              "source_ids": [
+                "july"
+              ],
+              "player_id": "f52bfbee-80b3-525a-aa5b-3aaf3babf088",
+              "external_player_id": "oe:player:6fcbbff49badbddafbda79a49abba07",
+              "identity_status": "exact_unique_handle"
+            },
+            {
+              "name": "Fuuu",
+              "position": "mid",
+              "source_ids": [
+                "july"
+              ],
+              "player_id": "d0b4a72f-33b3-535f-8d2d-6038fb802340",
+              "external_player_id": "oe:player:35859191db73609302debbc5c43117c",
+              "identity_status": "exact_unique_handle"
+            },
+            {
+              "name": "Morttheus",
+              "position": "adc",
+              "source_ids": [
+                "july"
+              ],
+              "player_id": "9b7b972b-96ea-5192-8bbe-54d3734946b5",
+              "external_player_id": "oe:player:1999dbe32608051613a2d3ed9c1b0d4",
+              "identity_status": "exact_unique_handle"
+            },
+            {
+              "name": "frosty",
+              "position": "support",
+              "source_ids": [
+                "july"
+              ],
+              "player_id": "ae4de9ae-541e-572e-99d8-4533ce25ed10",
+              "external_player_id": "oe:player:9d361f9d8214252ee571375f9105cb4",
+              "identity_status": "exact_unique_handle"
+            }
+          ]
+        },
+        {
+          "name": "Vivo Keyd Stars",
+          "players": [
+            {
+              "name": "ZekaS",
+              "position": "top",
+              "source_ids": [
+                "july"
+              ],
+              "player_id": "b545142e-a27d-5878-90e7-94ed3831df1c",
+              "external_player_id": "oe:player:2c777c5adf181aee4a6aa77ae4e3f0b",
+              "identity_status": "exact_unique_handle"
+            },
+            {
+              "name": "Disamis",
+              "position": "jungle",
+              "source_ids": [
+                "july"
+              ],
+              "player_id": "781df45a-756e-56ff-8f50-70fa0f7dd072",
+              "external_player_id": "oe:player:946b74bfc34e861b344ae03700af039",
+              "identity_status": "exact_unique_handle"
+            },
+            {
+              "name": "Mireu",
+              "position": "mid",
+              "source_ids": [
+                "july"
+              ],
+              "player_id": "3523bc9e-2702-57f6-a5dd-5a2580e14b30",
+              "external_player_id": "oe:player:5b86bafc34d79c84a8847d29b64ca29",
+              "identity_status": "exact_unique_handle"
+            },
+            {
+              "name": "Jeskla",
+              "position": "adc",
+              "source_ids": [
+                "july"
+              ],
+              "player_id": "2fdef06f-1c71-54f5-8b37-b5e9c1771891",
+              "external_player_id": "oe:player:71b8101d78beb04a089caa90a8d9310",
+              "identity_status": "exact_unique_handle"
+            },
+            {
+              "name": "scamber",
+              "position": "support",
+              "source_ids": [
+                "july"
+              ],
+              "player_id": "c80cc0fc-2739-50b8-bf1b-9ca470fe98c9",
+              "external_player_id": "oe:player:1d1600d15a68ab1a80348ee748ea1e3",
+              "identity_status": "exact_unique_handle"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "name": "Wizer",
+      "team": "Vivo Keyd Stars",
+      "kind": "departure_reported",
+      "reported_date": "2026-05-28",
+      "effective_date": null,
+      "source_ids": [
+        "may"
+      ],
+      "confidence": "reported",
+      "note": "Saída noticiada; data efetiva do contrato e destino atual não verificados.",
+      "player_id": "7d2f23dc-2191-5c04-a96b-ae1d7142843c",
+      "external_player_id": "oe:player:840d0b77e71408d3da84e4f0cae4b73",
+      "identity_status": "exact_unique_handle"
+    },
+    {
+      "name": "Kaiwing",
+      "team": "Vivo Keyd Stars",
+      "kind": "departure_reported",
+      "reported_date": "2026-05-28",
+      "effective_date": null,
+      "source_ids": [
+        "may"
+      ],
+      "confidence": "reported",
+      "note": "Saída noticiada; data efetiva do contrato e destino atual não verificados.",
+      "player_id": "c7feca0f-9127-53a6-a3a7-b865150704a1",
+      "external_player_id": "oe:player:0103d21d116b61eb55fa351242208cf",
+      "identity_status": "exact_unique_handle"
+    },
+    {
+      "name": "ZekaS",
+      "team": "Vivo Keyd Stars",
+      "kind": "departure_reported",
+      "reported_date": "2026-10-06",
+      "effective_date": null,
+      "source_ids": [
+        "october"
+      ],
+      "confidence": "secondary_report",
+      "note": "Saída registrada em fonte secundária. Anúncio primário não acessível nesta consulta; destino atual não verificado.",
+      "player_id": "b545142e-a27d-5878-90e7-94ed3831df1c",
+      "external_player_id": "oe:player:2c777c5adf181aee4a6aa77ae4e3f0b",
+      "identity_status": "exact_unique_handle"
+    },
+    {
+      "name": "Mireu",
+      "team": "Vivo Keyd Stars",
+      "kind": "departure_reported",
+      "reported_date": "2026-10-06",
+      "effective_date": null,
+      "source_ids": [
+        "october"
+      ],
+      "confidence": "secondary_report",
+      "note": "Saída registrada em fonte secundária. Anúncio primário não acessível nesta consulta; destino atual não verificado.",
+      "player_id": "3523bc9e-2702-57f6-a5dd-5a2580e14b30",
+      "external_player_id": "oe:player:5b86bafc34d79c84a8847d29b64ca29",
+      "identity_status": "exact_unique_handle"
+    },
+    {
+      "name": "Jeskla",
+      "team": "Vivo Keyd Stars",
+      "kind": "departure_reported",
+      "reported_date": "2026-10-06",
+      "effective_date": null,
+      "source_ids": [
+        "october"
+      ],
+      "confidence": "secondary_report",
+      "note": "Saída registrada em fonte secundária. Anúncio primário não acessível nesta consulta; destino atual não verificado.",
+      "player_id": "2fdef06f-1c71-54f5-8b37-b5e9c1771891",
+      "external_player_id": "oe:player:71b8101d78beb04a089caa90a8d9310",
+      "identity_status": "exact_unique_handle"
+    }
+  ],
+  "unresolved": []
+}
